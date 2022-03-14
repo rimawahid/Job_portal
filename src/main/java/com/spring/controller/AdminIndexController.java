@@ -7,8 +7,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class AdminIndexController {
-	@RequestMapping(value = "/admin/index", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public ModelAndView index() {
-		return new ModelAndView("admin/index");
+		return new ModelAndView("admin/admin");
 	}
 }

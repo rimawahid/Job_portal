@@ -68,5 +68,7 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-	<div class="top-line"></div>
+	
+	
+
 	

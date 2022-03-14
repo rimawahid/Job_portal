@@ -1,1 +1,0 @@
-<%@include file="/WEB-INF/view/admin/common/sidemanu.jsp"%>
