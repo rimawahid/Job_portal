@@ -266,6 +266,18 @@ input[type="submit"].custom-gradient {
     color: #999999;
 }
 
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.gray-link {
+    color: #666666 !important;
+}
+
+.underline-link {
+    text-decoration: underline !important;
+}
+
 /* jobseekers start here */
 form#main {
     padding: 40px 20px;

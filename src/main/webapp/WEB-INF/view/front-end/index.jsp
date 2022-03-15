@@ -367,5 +367,8 @@
 	<br />
 </div>
 <!-- jobs by Location start here -->
+
+
+
+
 <%@include file="/WEB-INF/view/front-end/common/footer.jsp"%>
-<!-- 	<!-- <div class="featured-companies">
