@@ -114,7 +114,7 @@
 
 
 						<div class="form-group">
-							<button type="submit" class="btn btn-primary btn-block mt-3 mb-2">Submit</button>
+							<a href="admin" class="text-white text-decoration-none"><button type="submit" class="btn btn-primary btn-block mt-3 mb-2">Submit</a></button></a>
 						</div>
 
 					</form>
@@ -124,7 +124,7 @@
 						<strong>Still don't have an account?</strong> <br> <a
 							class="underline-link gray-link" href="">Create your job
 							seeker account</a> &nbsp; or &nbsp; <a
-							class="underline-link gray-link" href="">Sign up as an
+							class="underline-link gray-link" href="employee/index">Sign up as an
 							employer</a>
 					</div>
 
