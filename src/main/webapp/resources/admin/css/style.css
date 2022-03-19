@@ -3,3 +3,10 @@
 .bg{
 	background-color:#484747
 }
+.btn-save {
+    background-color: #3C8224;
+    color: #fff;
+    width: 120px;
+    border-radius: 20px;
+    margin-top:10px
+}
