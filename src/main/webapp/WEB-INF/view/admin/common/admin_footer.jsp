@@ -1,4 +1,4 @@
-   <!-- Bootstrap core JavaScript-->
+ <!-- Bootstrap core JavaScript-->
     <script src="/resources/admin/vendor/jquery/jquery.min.js"></script>
     <script src="/resources/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

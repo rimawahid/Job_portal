@@ -6,9 +6,14 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-public class EmployersPaymentController {
-	@RequestMapping(value = "/employee/payment", method = RequestMethod.GET)
+public class ClientController {
+	@RequestMapping(value = "/client/index", method = RequestMethod.GET)
 	public ModelAndView index() {
-		return new ModelAndView("employers/employee_payment");
+		return new ModelAndView("clients/home");
 	}
+	
+	/*
+	 * @RequestMapping(value = "/client/postjob", method = RequestMethod.GET) public
+	 * ModelAndView postAJob() { return new ModelAndView("clients/job/postJob"); }
+	 */
 }

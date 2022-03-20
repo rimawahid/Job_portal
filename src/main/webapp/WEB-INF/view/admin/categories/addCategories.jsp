@@ -1,7 +1,7 @@
 
 <%@include file="/WEB-INF/view/admin/categories/categories.jsp"%>
  <div class="container">
-	<form action="/category/save" method="POST">
+	<form action="/admin/category/save" method="POST">
 	<h2 class="text-center mb-5 mt-5">Add Categories</h2>
 		<div class="form-group row">
 			<label for="code" class="col-sm-2 col-form-label">Category Code :</label>

@@ -70,4 +70,17 @@ a:hover{
 }
 
 
+.btn-save {
+    background-color: #14A800;
+    margin-left: 375px;
+    color: #fff;
+}
+
+.btn-save:hover {
+	border: 1px solid #14A800;
+  background-color: transparent;
+    margin-left: 375px;
+    color: #14A800;
+}
+
 

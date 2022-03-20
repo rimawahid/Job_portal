@@ -32,7 +32,7 @@ public class CategoriesController {
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public ModelAndView save(@ModelAttribute Category category) {
-		System.out.println(category.getCode());
+		//System.out.println(category.getCode());
 		Category c = categoryService.save(category);
 		return null;
 	}
