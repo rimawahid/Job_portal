@@ -36,28 +36,28 @@ public class JobPost {
 	private String budgetType;
 	
 //	@Temporal(TemporalType.DATE)
-//	@Column(name = "posted_time")
-//	private Date posted_time;
-//	
+	@Column(name = "posted_time")
+	private Date posted_time;
+	
 //	@Temporal(TemporalType.DATE)
-//	@Column(name = "delivery_deadline")
-//	private Date delivery_deadline;
-//
-//	public Date getPosted_time() {
-//		return posted_time;
-//	}
-//
-//	public void setPosted_time(Date posted_time) {
-//		this.posted_time = posted_time;
-//	}
-//
-//	public Date getDelivery_deadline() {
-//		return delivery_deadline;
-//	}
-//
-//	public void setDelivery_deadline(Date delivery_deadline) {
-//		this.delivery_deadline = delivery_deadline;
-//	}
+	@Column(name = "delivery_deadline")
+	private Date delivery_deadline;
+
+	public Date getPosted_time() {
+		return posted_time;
+	}
+
+	public void setPosted_time(Date posted_time) {
+		this.posted_time = posted_time;
+	}
+
+	public Date getDelivery_deadline() {
+		return delivery_deadline;
+	}
+
+	public void setDelivery_deadline(Date delivery_deadline) {
+		this.delivery_deadline = delivery_deadline;
+	}
 
 	public int getId() {
 		return id;

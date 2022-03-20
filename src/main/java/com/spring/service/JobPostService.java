@@ -21,4 +21,8 @@ public class JobPostService {
 	public List<JobPost> getAll(){
 		return jobPostDAO.getAll();
 	}
+	
+	public JobPost getProductById(int pid) {
+        return jobPostDAO.getProductById(pid);
+    }
 }

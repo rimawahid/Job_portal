@@ -47,7 +47,7 @@
 				<div>
 					<ul class="navbar-nav mr-auto ">
 						<li class="nav-item"><a class="nav-link text-decoration-none"
-							href="user/login">Log In</a></li>
+							href="/user/login">Log In</a></li>
 						<a class="btn btn-success rounded-pill pr-4 pl-4" href="user/singup">Sign
 							Up</a>
 					</ul>

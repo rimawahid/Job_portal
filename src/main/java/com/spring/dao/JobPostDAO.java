@@ -33,4 +33,11 @@ public class JobPostDAO {
 		List<JobPost> jobPosts = getSession().createQuery(sql).list();
 		return jobPosts;
 	}
+	
+	public JobPost getProductById(int pid) {
+        String sql = "from jobpost where id = '" + pid + "'";
+        List<JobPost> catList = getSession().createQuery(sql).list();
+        return catList.get(0);
+
+    }
 }

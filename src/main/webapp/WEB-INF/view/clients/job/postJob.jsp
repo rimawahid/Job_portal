@@ -74,7 +74,7 @@
 						Deadline:</label>
 					<div class="col-sm-9">
 						<input type="date" class="form-control" id="deliveryDeadline"
-							name="delivaery_deadline">
+							name="delivery_deadline">
 					</div>
 				</div> 
 				<div class="form-group row">

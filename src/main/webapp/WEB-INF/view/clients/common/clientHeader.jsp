@@ -23,7 +23,7 @@
 
 <!-- Custom styles for this template-->
 <link href="/resources/admin/css/sb-admin-2.min.css" rel="stylesheet">
-<link href="/resources/admin/css/ssssstyle.css" rel="stylesheet">
+<link href="/resources/admin/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="/resources/vendor/css/bootstrap.css">
 <link rel="stylesheet" href="/resources/vendor/css/style.css">
 
