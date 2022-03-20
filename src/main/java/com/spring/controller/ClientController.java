@@ -12,8 +12,8 @@ public class ClientController {
 		return new ModelAndView("clients/home");
 	}
 	
-	/*
-	 * @RequestMapping(value = "/client/postjob", method = RequestMethod.GET) public
-	 * ModelAndView postAJob() { return new ModelAndView("clients/job/postJob"); }
-	 */
+	
+	  @RequestMapping(value = "/client/postjob", method = RequestMethod.GET) public
+	  ModelAndView postAJob() { return new ModelAndView("clients/job/postJob"); }
+	 
 }

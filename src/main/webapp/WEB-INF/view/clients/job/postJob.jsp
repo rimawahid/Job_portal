@@ -11,16 +11,16 @@
 		<div class="col-md-8">
 			<form class="" action="/client/save" method="POST">
 
-				<div class="form-group row">
-					<label for="name" class="col-sm-3 col-form-label">Category:</label>
-					<div class="col-sm-9">
-						<select id="inputState" class="form-control" name="category">
-							<c:forEach items="${categories}" var="category">
-								<option value="${category.name}">${category.name}</option>
-							</c:forEach>
-						</select>
-					</div>
-				</div>
+<!-- 				<div class="form-group row"> -->
+<!-- 					<label for="name" class="col-sm-3 col-form-label">Category:</label> -->
+<!-- 					<div class="col-sm-9"> -->
+<!-- 						<select id="inputState" class="form-control" name="category"> -->
+<%-- 							<c:forEach items="${categories}" var="category"> --%>
+<%-- 								<option value="${category.name}">${category.name}</option> --%>
+<%-- 							</c:forEach> --%>
+<!-- 						</select> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
 				<!-- <div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Job Type:</label>
 					<div class="col-sm-9">
@@ -39,18 +39,18 @@
 				<div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Description:</label>
 					<div class="col-sm-9">
-						<textarea class="form-control" id="exampleFormControlTextarea1"
+						<textarea class="form-control" id="exampleFormControlTextarea1" name="description"
 							rows="3"></textarea>
 					</div>
 				</div>
-			<!-- <div class="form-group row">
+			<div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Posted
 						Time:</label>
 					<div class="col-sm-9">
 						<input type="date" class="form-control" id="postedTime"
-							name="postedTime">
+							name="posted_time">
 					</div>
-				</div> -->
+				</div> 
 				<div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Budget:</label>
 					<div class="col-sm-9">
@@ -69,14 +69,14 @@
 
 					</div>
 				</div>
-		<!-- 		<div class="form-group row">
+		<div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Delivery
 						Deadline:</label>
 					<div class="col-sm-9">
-						<input type="date" class="form-control" id="delivaeryDeadline"
-							name="delivaeryDeadline">
+						<input type="date" class="form-control" id="deliveryDeadline"
+							name="delivaery_deadline">
 					</div>
-				</div> -->
+				</div> 
 				<div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Attachment</label>
 					<div class="col-sm-9">

@@ -1,6 +1,8 @@
 package com.spring.model;
 
-import java.util.Date;
+
+
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,7 +14,7 @@ import javax.persistence.TemporalType;
 
 @Entity(name = "jobpost")
 @Table(name = "jobpost")
-public class Jobpost {
+public class JobPost {
 	@Id
 	@GeneratedValue
 	@Column(name = "id")
@@ -21,32 +23,41 @@ public class Jobpost {
 	@Column(name = "category")
 	private String category;
 
-	@Column(name = "jobType")
-	private String jobType;
-
-	@Column(name = "Title")
+	@Column(name = "title")
 	private String title;
 
 	@Column(name = "description")
 	private String description;
 
-	/*
-	 * @Temporal(TemporalType.DATE)
-	 * 
-	 * @Column(name = "postedTime") private Date postedTime;
-	 */
-
 	@Column(name = "budget")
-	private double budget;
+	private String budget;
 
 	@Column(name = "budgetType")
 	private String budgetType;
-
-	/*
-	 * @Temporal(TemporalType.DATE)
-	 * 
-	 * @Column(name = "delivaryDeadline") private Date delivaryDeadline;
-	 */
+	
+//	@Temporal(TemporalType.DATE)
+//	@Column(name = "posted_time")
+//	private Date posted_time;
+//	
+//	@Temporal(TemporalType.DATE)
+//	@Column(name = "delivery_deadline")
+//	private Date delivery_deadline;
+//
+//	public Date getPosted_time() {
+//		return posted_time;
+//	}
+//
+//	public void setPosted_time(Date posted_time) {
+//		this.posted_time = posted_time;
+//	}
+//
+//	public Date getDelivery_deadline() {
+//		return delivery_deadline;
+//	}
+//
+//	public void setDelivery_deadline(Date delivery_deadline) {
+//		this.delivery_deadline = delivery_deadline;
+//	}
 
 	public int getId() {
 		return id;
@@ -62,14 +73,6 @@ public class Jobpost {
 
 	public void setCategory(String category) {
 		this.category = category;
-	}
-
-	public String getJobType() {
-		return jobType;
-	}
-
-	public void setJobType(String jobType) {
-		this.jobType = jobType;
 	}
 
 	public String getTitle() {
@@ -88,17 +91,11 @@ public class Jobpost {
 		this.description = description;
 	}
 
-	/*
-	 * public Date getPostedTime() { return postedTime; }
-	 * 
-	 * public void setPostedTime(Date postedTime) { this.postedTime = postedTime; }
-	 */
-
-	public double getBudget() {
+	public String getBudget() {
 		return budget;
 	}
 
-	public void setBudget(double budget) {
+	public void setBudget(String budget) {
 		this.budget = budget;
 	}
 
@@ -110,16 +107,10 @@ public class Jobpost {
 		this.budgetType = budgetType;
 	}
 
-//	public Date getDelivaryDeadline() {
-//		return delivaryDeadline;
-//	}
-//
-//	public void setDelivaryDeadline(Date delivaryDeadline) {
-//		this.delivaryDeadline = delivaryDeadline;
-//	}
+	
 
-	/*
-	 * @Column(name = "attachment") private attachment;
-	 */
-
+	
+	
+	
+	
 }

@@ -34,7 +34,8 @@ public class CategoriesController {
 	public ModelAndView save(@ModelAttribute Category category) {
 		//System.out.println(category.getCode());
 		Category c = categoryService.save(category);
-		return null;
+		List<Category> categories = categoryService.getAll();
+		return new ModelAndView("admin/categories/showCategories", "categories", categories);
 	}
 
 	/* For show */

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 
-import com.spring.model.Jobpost;
+import com.spring.model.JobPost;
 
 @Repository(value = "jobPostDAO")
 @Transactional
@@ -19,11 +19,10 @@ public class JobPostDAO {
 	private Session getSession() {
 		return entityManager.unwrap(Session.class);
 	}
-
 	
-	public Jobpost save(Jobpost jobpost) {
-		getSession().save(jobpost);
+	public JobPost save(JobPost jobPost) {
+		getSession().save(jobPost);
 		getSession().flush();
-		return jobpost;
+		return jobPost;
 	}
 }

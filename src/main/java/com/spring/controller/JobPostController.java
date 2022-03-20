@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.model.Category;
-import com.spring.model.Jobpost;
+import com.spring.model.JobPost;
 import com.spring.service.CategoryService;
 import com.spring.service.JobPostService;
+
 
 
 @RestController
@@ -20,23 +21,23 @@ import com.spring.service.JobPostService;
 public class JobPostController {
 
 	@Autowired
-	CategoryService categoryService;
+	//CategoryService categoryService;
 	JobPostService jobPostService;
 
 	/* For show Category */
-	@RequestMapping(value = "/postjob", method = RequestMethod.GET)
-	public ModelAndView view() {
-		List<Category> categories = categoryService.getAll();
-		return new ModelAndView("clients/job/postJob", "categories", categories);
-	}
+//	@RequestMapping(value = "/postjob", method = RequestMethod.GET)
+//	public ModelAndView view() {
+//		List<Category> categories = categoryService.getAll();
+//		return new ModelAndView("clients/job/postJob", "categories", categories);
+//	}
 	
 	/* For add */
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	public ModelAndView save(@ModelAttribute Jobpost jobpost) {
+	public ModelAndView save(@ModelAttribute JobPost jobpost) {
 		//System.out.println(jobpost.getDelivaryDeadline()+"job");
 		System.out.println(jobpost.getBudgetType()+"job");
-		Jobpost c = jobPostService.save(jobpost);
+		JobPost c = jobPostService.save(jobpost);
 		return null;
 	}
 }
