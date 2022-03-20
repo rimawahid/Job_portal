@@ -11,16 +11,16 @@
 		<div class="col-md-8">
 			<form class="" action="/client/save" method="POST">
 
-<!-- 				<div class="form-group row"> -->
-<!-- 					<label for="name" class="col-sm-3 col-form-label">Category:</label> -->
-<!-- 					<div class="col-sm-9"> -->
-<!-- 						<select id="inputState" class="form-control" name="category"> -->
-<%-- 							<c:forEach items="${categories}" var="category"> --%>
-<%-- 								<option value="${category.name}">${category.name}</option> --%>
-<%-- 							</c:forEach> --%>
-<!-- 						</select> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
+				<div class="form-group row">
+					<label for="name" class="col-sm-3 col-form-label">Category:</label>
+					<div class="col-sm-9">
+						<select id="inputState" class="form-control" name="category">
+							<c:forEach items="${categories}" var="category">
+								<option value="${category.name}">${category.name}</option>
+							</c:forEach>
+						</select>
+					</div>
+				</div>
 				<!-- <div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Job Type:</label>
 					<div class="col-sm-9">

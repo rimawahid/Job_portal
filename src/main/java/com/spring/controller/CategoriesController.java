@@ -70,4 +70,11 @@ public class CategoriesController {
 		List<Category> categories = categoryService.getAll();
 		return new ModelAndView("admin/categories/showCategories", "categories", categories);
 	}
+	
+	/* For show Category */
+	@RequestMapping(value = "/client/postjob", method = RequestMethod.GET)
+	public ModelAndView viewCategory() {
+		List<Category> categories = categoryService.getAll();
+		return new ModelAndView("clients/job/postJob", "categories", categories);
+	}
 }

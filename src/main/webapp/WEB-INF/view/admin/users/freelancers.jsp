@@ -5,6 +5,7 @@
 <div role="tabpanel" class="tab-pane active container mt-3 mb-4" id="">
 	<div class="col-lg-12">
 		<h1 style="text-align: center">Freelancer List</h1>
+		
 		<table class="table table-striped table-hover">
 			<tr>
 				<th>First Name</th>
