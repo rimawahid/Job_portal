@@ -40,4 +40,11 @@ public class JobPostController {
 		JobPost c = jobPostService.save(jobpost);
 		return null;
 	}
+	
+	/* For show */
+	@RequestMapping(value = "/showAlljob", method = RequestMethod.GET)
+	public ModelAndView view() {
+		List<JobPost> jobPosts = jobPostService.getAll();
+		return new ModelAndView("clients/job/showJobs", "jobPosts", jobPosts);
+	}
 }

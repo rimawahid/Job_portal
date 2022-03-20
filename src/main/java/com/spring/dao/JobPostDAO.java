@@ -1,5 +1,7 @@
 package com.spring.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 
 import org.hibernate.Session;
@@ -7,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-
+import com.spring.model.Category;
 import com.spring.model.JobPost;
 
 @Repository(value = "jobPostDAO")
@@ -24,5 +26,11 @@ public class JobPostDAO {
 		getSession().save(jobPost);
 		getSession().flush();
 		return jobPost;
+	}
+	
+	public List<JobPost> getAll() {
+		String sql = "from jobpost";
+		List<JobPost> jobPosts = getSession().createQuery(sql).list();
+		return jobPosts;
 	}
 }
