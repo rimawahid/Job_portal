@@ -1,12 +1,14 @@
 package com.spring.service;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.spring.dao.UserDAO;
-
+import com.spring.model.Category;
 import com.spring.model.User;
 
 
@@ -33,4 +35,17 @@ public class UserService {
 	public User findByUsernameAndPassword(String email) {
 		return userDAO.findByUsernameAndPassword(email);
 	}
+	
+	public List<User> findByClient(String role) {
+		return userDAO.findByClient(role);
+	}
+	
+	public List<User> findByFreelancer(String role) {
+		return userDAO.findByFreelancer(role);
+	}
+	
+	 public User delete(int pid) {
+		 User user = userDAO.getProductById(pid);
+	        return userDAO.delete(user);
+	    }
 }

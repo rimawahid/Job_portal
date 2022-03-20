@@ -3,7 +3,7 @@
 	<div class="row mt-5">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
-			<form class="border p-3" action="/save" method="POST">
+			<form class="border p-3" action="/user/save" method="POST">
 				<h2 class="text-center mt-4">Complete your free account setup</h2>
 				<div class="form-row mt-4 ">
 					<div class="form-group col-md-6">

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.spring.model.Category;
 import com.spring.model.User;
 
 
@@ -35,6 +36,34 @@ public class UserDAO {
         return userList.get(0);
 
 	}
+	
+	public List<User> findByClient(String role) {
+		String sql = "from user where role = '" + "Client" + "'";
+        List<User> userList = getSession().createQuery(sql).list();
+        return userList;
+
+	}
+	
+	public List<User> findByFreelancer(String role) {
+		String sql = "from user where role = '" + "freelancer" + "'";
+        List<User> userList = getSession().createQuery(sql).list();
+        return userList;
+
+	}
+	
+	public User getProductById(int pid) {
+        String sql = "from user where id = '" + pid + "'";
+        List<User> catList = getSession().createQuery(sql).list();
+        return catList.get(0);
+
+    }
+	
+	public User delete(User user) {
+    	String sql = "delete user where id = '"+user.getId()+"'";
+        int delete = getSession().createQuery(sql).executeUpdate();
+        return user;
+    }
+	
 	
 	
 }

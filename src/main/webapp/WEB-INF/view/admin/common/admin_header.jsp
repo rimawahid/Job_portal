@@ -97,13 +97,9 @@
                 <div id="users" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="utilities-color.html">Employers</a>
-                        <a class="collapse-item" href="utilities-border.html">Jobseekers</a>
-                        <a class="collapse-item" href="utilities-animation.html">Jobseeker Fields</a>
-                        <a class="collapse-item" href="utilities-other.html">Employer Fields</a>
-                        <a class="collapse-item" href="utilities-border.html">Company Reviews</a>
-                        <a class="collapse-item" href="utilities-animation.html">User Messages</a>
-                        <a class="collapse-item" href="utilities-other.html">Uploaded Files</a>
+                        <a class="collapse-item" href="/user/client">Clients</a>
+                        <a class="collapse-item" href="/user/freelancer">Freelancer</a>
+                        
                     </div>
                 </div>
             </li>

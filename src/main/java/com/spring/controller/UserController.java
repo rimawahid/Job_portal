@@ -1,19 +1,22 @@
 package com.spring.controller;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-
+import com.spring.model.Category;
 import com.spring.model.User;
 import com.spring.service.UserService;
 
 @RestController
-//@RequestMapping(value = "user")
+@RequestMapping(value = "user")
 public class UserController {
 	@Autowired
 	UserService userService;
@@ -56,7 +59,39 @@ public class UserController {
     }
     
     
-    
-    
+	/* For All Clients */
+	@RequestMapping(value = "/client", method = RequestMethod.GET)
+	public ModelAndView viewClient() {
+		List<User> users = userService.findByClient(null);
+		System.out.println(users);
+		return new ModelAndView("admin/users/clients", "users", users);
+	}
+	
+	/* For All Freelancer */
+	@RequestMapping(value = "/freelancer", method = RequestMethod.GET)
+	public ModelAndView viewFreelancer() {
+		List<User> users = userService.findByFreelancer(null);
+		System.out.println(users);
+		return new ModelAndView("admin/users/freelancers", "users", users);
+	}
+	
+
+	/* For delete Client*/
+	@RequestMapping(value = "/delete/client/{id}", method = RequestMethod.GET)
+	public ModelAndView delete(@PathVariable String id) {
+		int pid = Integer.valueOf(id);
+		User p = userService.delete(pid);
+		List<User> users = userService.findByClient(id);
+		return new ModelAndView("admin/users/clients", "users", users);
+	}
+	
+	/* For delete Freelancer*/
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+	public ModelAndView deletefreelancer(@PathVariable String id) {
+		int pid = Integer.valueOf(id);
+		User p = userService.delete(pid);
+		List<User> users = userService.findByClient(id);
+		return new ModelAndView("admin/users/freelancers", "users", users);
+	}
     
 }

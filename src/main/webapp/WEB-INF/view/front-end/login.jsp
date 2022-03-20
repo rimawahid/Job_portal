@@ -4,7 +4,7 @@
 	<div class="row mt-5">
 		<div class="col-md-3"></div>
 		<div class="col-md-6">
-			<form class="border p-5" action="/login-user" method="POST">
+			<form class="border p-5" action="login-user" method="POST">
 				<h2 class="text-center  mb-4">Log in to Upwork</h2>
 
 				<div class="form-group  mt-3">
