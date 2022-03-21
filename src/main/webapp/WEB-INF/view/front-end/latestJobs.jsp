@@ -7,42 +7,41 @@
 			<h3 class="no-margin">Latest Jobs</h3>
 			<hr />
 			<br />
+			<c:forEach items="${jobPosts}" var="jobPost">
+				<div class="job-wrap border p-3 job-post">
+					<a>${jobPost.title}</a>
+					<div class="d-flex justify-content-start">
+						<p class="job-text">${jobPost.budgetType}</p>
+						<p class="job-text">Budget:${jobPost.budget}</p>
+						<p class="job-text">Posted: ${jobPost.posted_time}</p>
+					</div>
+					<p>${jobPost.description}</p>
+					<div class="d-flex justify-content-start">
+						<p class="skill border rounded-pill">Java</p>
+						<p class="skill border rounded-pill">JavaScript</p>
+						<p class="skill border rounded-pill">PHP</p>
+					</div>
+					<p class="job-text">Proposals:</p>
 
-			<div class="job-wrap border p-3">
-				<a>Title</a>
-				<div class="d-flex justify-content-start">
-					<p class="job-text">Fixed-price:</p>
-					<p class="job-text">Budget:</p>
-					<p class="job-text">Posted:</p>
+
+
+					<div class="d-flex justify-content-start">
+						<p class="pr-3">
+							<i class="fa-solid fa-square-check tick-color"></i> <span
+								class="job-text">Payment verified </span> <i
+								class="fa-solid fa-star star-color"></i> <i
+								class="fa-solid fa-star star-color"></i> <i
+								class="fa-solid fa-star star-color"></i> <i
+								class="fa-solid fa-star star-color"></i>
+						</p>
+						<p class="job-text">
+							<i class="fa-solid fa-location-dot pr-1"></i>Bangladesh
+						</p>
+					</div>
+
 				</div>
-				<p>The majority of those phone calls will come from patients in
-					need of assistance with the follow topics: Requests</p>
-				<div class="d-flex justify-content-start">
-					<p class="skill border rounded-pill">Java</p>
-					<p class="skill border rounded-pill">JavaScript</p>
-					<p class="skill border rounded-pill">PHP</p>
-				</div>
-				<p class="job-text">Proposals:</p>
 
-
-
-				<div class="d-flex justify-content-start">
-					<p class="pr-3">
-						<i class="fa-solid fa-square-check tick-color"></i> <span
-							class="job-text">Payment verified </span> <i
-							class="fa-solid fa-star star-color"></i> <i
-							class="fa-solid fa-star star-color"></i> <i
-							class="fa-solid fa-star star-color"></i> <i
-							class="fa-solid fa-star star-color"></i>
-					</p>
-					<p class="job-text">
-						<i class="fa-solid fa-location-dot pr-1"></i>Bangladesh
-					</p>
-				</div>
-
-			</div>
-
-
+			</c:forEach>
 			<script type="text/javascript"
 				src="https://www.indeed.com/ads/apiresults.js"></script>
 

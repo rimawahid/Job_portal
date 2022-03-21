@@ -18,6 +18,7 @@ a:hover{
 	font-size:24px;
 	line-height:32px;
 	font-weight:500;
+	
 }
 
 
@@ -86,8 +87,8 @@ a:hover{
 .job-text {
     color: #656565;
     font-size: 13px;
-    /* line-height: 18px; */
     margin-top: 3px;
+    margin-right:10px;
 }
 .skill {
     border: 1px solid gray;
@@ -101,5 +102,8 @@ a:hover{
 }
 .tick-color{
 	color:#1f57c3;
+}
+.job-post:hover{
+	background: #f7f7f7;
 }
 

@@ -9,7 +9,7 @@
 	<div class="row">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
-			<form class="" action="/client/save" method="POST">
+			<form class="" action="/client/job/save" method="POST">
 
 				<div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Category:</label>

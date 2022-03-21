@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
-			<form class="" action="/client/update" method="POST">
+			<form class="" action="/client/job/update" method="POST">
 				<div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Category:</label>
 					<div class="col-sm-9">
