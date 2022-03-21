@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Job Portal</title>
 <link rel="stylesheet" href="/resources/vendor/css/bootstrap.css">
-<link rel="stylesheet" href="/resources/vendor/css/style.css">
+<link rel="stylesheet" href="/resources/admin/css/style.css">
 </head>
 <body>
 	<div class="container">
@@ -23,7 +23,7 @@
 				<ul class="navbar-nav mr-auto nav-mr">
 					<li class="nav-item nav-hover"><a class="nav-link " href="#">Find
 							Talent </a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Find
+					<li class="nav-item"><a class="nav-link" href="/findWork">Find
 							Work</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"

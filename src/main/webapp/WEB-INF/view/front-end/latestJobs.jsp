@@ -1,87 +1,48 @@
 <%@include file="/WEB-INF/view/front-end/common/header.jsp"%>
+<link rel="stylesheet" href="/resources/vendor/css/style.css">
 <div class="container mt-5">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-9 pd-4">
 
 			<h3 class="no-margin">Latest Jobs</h3>
 			<hr />
 			<br />
 
-			<div class="job-wrap">
-				<div class="row">
-					<div class="col-md-9">
-						<a
-							href="fjob-f7c33525906c82f3-customer-service-agent-work-from-home.html"><h4
-								class="no-margin results-job-title">Customer Service Agent
-								- Work From Home</h4></a>
-						<ul class="results-job-details">
-							<li>Little Rock, AR</li>
-							<li>Posted on: Fri, 11 Mar 2022 10:14:28 GMT</li>
-						</ul>
-						<div class="results-job-description">The majority of those
-							phone calls will come from patients in need of assistance with
-							the follow topics: Requests for new patient registration.</div>
-						<div class="clearfix"></div>
-						<a
-							href="fjob-f7c33525906c82f3-customer-service-agent-work-from-home.html"
-							class="job-details-link">Job Details</a>
-						<div class="clearfix"></div>
-					</div>
-					<div class="col-md-3 text-center">
-						<div class="save-job-link">Posted by</div>
-						<span class="feed-company">Sutter Health</span>
-					</div>
+			<div class="job-wrap border p-3">
+				<a>Title</a>
+				<div class="d-flex justify-content-start">
+					<p class="job-text">Fixed-price:</p>
+					<p class="job-text">Budget:</p>
+					<p class="job-text">Posted:</p>
 				</div>
+				<p>The majority of those phone calls will come from patients in
+					need of assistance with the follow topics: Requests</p>
+				<div class="d-flex justify-content-start">
+					<p class="skill border rounded-pill">Java</p>
+					<p class="skill border rounded-pill">Java</p>
+					<p class="skill border rounded-pill">Java</p>
+				</div>
+				<p class="job-text">Proposals:</p>
+
+
+
+				<div class="d-flex justify-content-start">
+					<p class="pr-3">
+						<i class="fa-solid fa-square-check tick-color"></i> <span
+							class="job-text">Payment verified </span> <i
+							class="fa-solid fa-star star-color"></i> <i
+							class="fa-solid fa-star star-color"></i> <i
+							class="fa-solid fa-star star-color"></i> <i
+							class="fa-solid fa-star star-color"></i>
+					</p>
+					<p class="job-text">
+						<i class="fa-solid fa-location-dot pr-1"></i>Bangladesh
+					</p>
+				</div>
+
 			</div>
-			<br />
 
 
-			<!-- <ul class="pagination">
-				<li class="active page-item"><a class="page-link"
-					href="index.php?page=en-Latest Jobs&searches=[" HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&page=en-Latest
-					Jobs&searches=[ "HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&num=1">1</a></li>
-				<li page-item><a class="page-link"
-					href="index.php?page=en-Latest Jobs&searches=[" HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&page=en-Latest
-					Jobs&searches=[ "HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&num=2">2</a></li>
-				<li page-item><a class="page-link"
-					href="index.php?page=en-Latest Jobs&searches=[" HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&page=en-Latest
-					Jobs&searches=[ "HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&num=3">3</a></li>
-				<li page-item><a class="page-link"
-					href="index.php?page=en-Latest Jobs&searches=[" HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&page=en-Latest
-					Jobs&searches=[ "HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&num=4">4</a></li>
-				<li page-item><a class="page-link"
-					href="index.php?page=en-Latest Jobs&searches=[" HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&page=en-Latest
-					Jobs&searches=[ "HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&num=5">5</a></li>
-				<li class="page-item"><a class="page-link">...</a></li>
-				<li><a class="page-link"
-					href="index.php?page=en-Latest Jobs&searches=[" HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&page=en-Latest
-					Jobs&searches=[ "HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&num=62726">62726</a></li>
-				<li class="page-item"><a class="page-link"
-					href="index.php?page=en-Latest Jobs&searches=[" HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&page=en-Latest
-					Jobs&searches=[ "HR
-					Training~#14#-1~1646368280"]&PHPSESSID=d804557a53785f9183c1ce269512156a&Auth=administrator~e99a18c428cb38d5f260853678922e03~1647082644&num=2">
-						> </a></li>
-			</ul> -->
-
-
-			<span id="indeed_at" style="font-size: 10px; margin-left: 30px"><a
-				href="https://www.indeed.com/" rel="nofollow">jobs</a> by <a
-				href="https://www.indeed.com/" title="Job Search" rel="nofollow"><img
-					src="https://www.indeed.com/p/jobsearch.gif"
-					style="border: 0; vertical-align: middle;" alt="Indeed job search"></a></span>
 			<script type="text/javascript"
 				src="https://www.indeed.com/ads/apiresults.js"></script>
 
@@ -92,7 +53,7 @@
 
 
 
-		<div class="col-md-4">
+		<div class="col-md-3">
 			side content
 
 			<script>
@@ -181,7 +142,7 @@
 							<option value="7000">7,000</option>
 							<option value="8000">8,000</option>
 							<option value="9000">9,000</option>
-							
+
 						</select>
 
 					</div>
@@ -198,7 +159,7 @@
 							<option value="7000">7,000</option>
 							<option value="8000">8,000</option>
 							<option value="9000">9,000</option>
-							
+
 						</select>
 					</div>
 

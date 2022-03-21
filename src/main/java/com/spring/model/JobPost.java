@@ -7,6 +7,7 @@ import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -16,7 +17,7 @@ import javax.persistence.TemporalType;
 @Table(name = "jobpost")
 public class JobPost {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private int id;
 
@@ -30,7 +31,7 @@ public class JobPost {
 	private String description;
 
 	@Column(name = "budget")
-	private String budget;
+	private Double budget;
 
 	@Column(name = "budgetType")
 	private String budgetType;
@@ -91,11 +92,11 @@ public class JobPost {
 		this.description = description;
 	}
 
-	public String getBudget() {
+	public Double getBudget() {
 		return budget;
 	}
 
-	public void setBudget(String budget) {
+	public void setBudget(Double budget) {
 		this.budget = budget;
 	}
 

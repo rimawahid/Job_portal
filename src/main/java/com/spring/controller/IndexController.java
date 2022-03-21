@@ -8,14 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class IndexController {
 
-	@RequestMapping(value = "/", method = RequestMethod.GET) 
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView index() {
 		return new ModelAndView("front-end/index");
 	}
 
-	/*
-	 * @RequestMapping(value = "/contact", method = RequestMethod.GET) public
-	 * ModelAndView contact() { return new ModelAndView("front-end/contact"); }
-	 */
-	
+	@RequestMapping(value = "/findWork", method = RequestMethod.GET)
+	public ModelAndView findWork() {
+		return new ModelAndView("front-end/latestJobs");
+	}
+
 }

@@ -2,6 +2,8 @@ package com.spring.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,32 +20,32 @@ import com.spring.service.JobPostService;
 
 
 @RestController
-@RequestMapping(value = "client")
+@RequestMapping(value = "client/job")
 public class JobPostController {
 
 	@Autowired
-	//CategoryService categoryService;
+	CategoryService categoryService;
+	
+	@Autowired
 	JobPostService jobPostService;
 
 	/* For show Category */
-//	@RequestMapping(value = "/postjob", method = RequestMethod.GET)
-//	public ModelAndView view() {
-//		List<Category> categories = categoryService.getAll();
-//		return new ModelAndView("clients/job/postJob", "categories", categories);
-//	}
+	@RequestMapping(value = "/postjob", method = RequestMethod.GET)
+	public ModelAndView view1() {
+		List<Category> categories = categoryService.getAll();
+		return new ModelAndView("clients/job/postJob", "categories", categories);
+	}
 	
 	/* For add */
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public ModelAndView save(@ModelAttribute JobPost jobpost) {
-		System.out.println(jobpost.getDelivery_deadline());
-		System.out.println(jobpost.getPosted_time());
 		JobPost c = jobPostService.save(jobpost);
 		return null;
 	}
 	
 	/* For show */
-	@RequestMapping(value = "/showAlljob", method = RequestMethod.GET)
+	@RequestMapping(value = "/showJobs", method = RequestMethod.GET)
 	public ModelAndView view() {
 		List<JobPost> jobPosts = jobPostService.getAll();
 		return new ModelAndView("clients/job/showJobs", "jobPosts", jobPosts);
@@ -55,5 +57,31 @@ public class JobPostController {
 		int pid = Integer.valueOf(id);
 		JobPost j = jobPostService.getProductById(pid);
 		return new ModelAndView("clients/job/updatejobs", "j", j);
+	}
+	
+
+	/* For update */
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public ModelAndView update(@ModelAttribute JobPost jobpost) {
+		JobPost j = jobPostService.update(jobpost);
+		List<JobPost> jobPosts = jobPostService.getAll();
+		return new ModelAndView("clients/job/showJobs", "jobPosts", jobPosts);
+	}
+	
+//	/* For update */
+//	@RequestMapping(value = "/update", method = RequestMethod.POST)
+//	public ModelAndView update(HttpServletRequest request)  {
+//		JobPost j = jobPostService.update(request);
+//		List<JobPost> jobPosts = jobPostService.getAll();
+//		return new ModelAndView("clients/job/showJobs", "jobPosts", jobPosts);
+//	}
+	
+	/* For delete */
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+	public ModelAndView delete(@PathVariable String id) {
+		int pid = Integer.valueOf(id);
+		JobPost j = jobPostService.delete(pid);
+		List<JobPost> jobPosts = jobPostService.getAll();
+		return new ModelAndView("clients/job/showJobs", "jobPosts", jobPosts);
 	}
 }

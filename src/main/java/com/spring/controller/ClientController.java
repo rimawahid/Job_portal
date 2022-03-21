@@ -12,20 +12,21 @@ import com.spring.model.Category;
 import com.spring.service.CategoryService;
 
 @RestController
+@RequestMapping(value = "client")
 public class ClientController {
 	@Autowired
 	CategoryService categoryService;
 	
-	@RequestMapping(value = "/client/index", method = RequestMethod.GET)
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public ModelAndView index() {
 		return new ModelAndView("clients/home");
 	}
 
-	@RequestMapping(value = "/client/postjob", method = RequestMethod.GET)
-	public ModelAndView postAJob() {
-		List<Category> categories = categoryService.getAll();
-	return new ModelAndView("clients/job/postJob", "categories", categories);
-	}
+//	@RequestMapping(value = "/postjob", method = RequestMethod.GET)
+//	public ModelAndView postAJob() {
+//		List<Category> categories = categoryService.getAll();
+//	return new ModelAndView("clients/job/postJob", "categories", categories);
+//	}
 
 
 }

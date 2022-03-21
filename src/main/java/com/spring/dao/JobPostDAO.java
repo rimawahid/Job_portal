@@ -40,4 +40,17 @@ public class JobPostDAO {
         return catList.get(0);
 
     }
+	
+	public JobPost update(JobPost jobPost) {
+		getSession().update(jobPost);
+		getSession().flush();
+		return jobPost;
+	}
+	
+	public JobPost delete(JobPost jobPost) {
+    	//String sql = "delete airport where id = '"+airport.getId()+"'";
+        getSession().delete(jobPost);
+        getSession().flush();
+        return jobPost;
+    }
 }
