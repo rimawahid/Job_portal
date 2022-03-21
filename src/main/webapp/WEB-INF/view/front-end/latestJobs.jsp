@@ -19,8 +19,8 @@
 					need of assistance with the follow topics: Requests</p>
 				<div class="d-flex justify-content-start">
 					<p class="skill border rounded-pill">Java</p>
-					<p class="skill border rounded-pill">Java</p>
-					<p class="skill border rounded-pill">Java</p>
+					<p class="skill border rounded-pill">JavaScript</p>
+					<p class="skill border rounded-pill">PHP</p>
 				</div>
 				<p class="job-text">Proposals:</p>
 
