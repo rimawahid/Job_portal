@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Job Portal</title>
 <link rel="stylesheet" href="/resources/vendor/css/bootstrap.css">
-<link rel="stylesheet" href="/resources/admin/css/style.css">
+<link rel="stylesheet" href="/resources/vendor/css/style.css">
 </head>
 <body>
 	<div class="container">

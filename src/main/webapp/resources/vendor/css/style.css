@@ -83,4 +83,23 @@ a:hover{
     color: #14A800;
 }
 
+.job-text {
+    color: #656565;
+    font-size: 13px;
+    /* line-height: 18px; */
+    margin-top: 3px;
+}
+.skill {
+    border: 1px solid gray;
+    padding: 0px 15px;
+    background: #f7f7f7;
+    margin: 0px 3px;
+}
+.star-color {
+    color: #14A800;
+    font-size: 13px;
+}
+.tick-color{
+	color:#1f57c3;
+}
 
