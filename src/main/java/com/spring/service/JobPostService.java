@@ -30,21 +30,14 @@ public class JobPostService {
 	public JobPost update (JobPost j) {
 		return jobPostDAO.update(j);
 	}
-	
-//	public JobPost update(HttpServletRequest request) {
-//        //String name = request.getParameter("name");
-//		JobPost jobPost = new JobPost();
-//		jobPost.setId(Integer.valueOf(request.getParameter("id")));
-//		jobPost.setTitle(request.getParameter("title"));
-//		jobPost.setDescription(request.getParameter("description"));
-//		jobPost.setBudget(Double.valueOf(request.getParameter("budget")));
-//		//jobPost.setDelivery_deadline(Date.valueOf(request.getParameter("budget")));
-//		return jobPostDAO.update(jobPost);
-//    }
-//	
-	
+
 	 public JobPost delete(int pid) {
 		 JobPost jobPost = jobPostDAO.getProductById(pid);
 	        return jobPostDAO.delete(jobPost);
 	    }
+	 
+	 public List<JobPost> getDetails(String title) {
+         return jobPostDAO.getDetails(title);
+    }
+	 
 }

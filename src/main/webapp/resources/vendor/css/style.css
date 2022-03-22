@@ -90,6 +90,12 @@ a:hover{
     margin-top: 3px;
     margin-right:10px;
 }
+.jobtext{
+    color: #656565;
+    font-size: 14px;
+    margin-top: 3px;
+    margin-right:10px;
+}
 .skill {
     border: 1px solid gray;
     padding: 0px 15px;
@@ -105,5 +111,24 @@ a:hover{
 }
 .job-post:hover{
 	background: #f7f7f7;
+}
+.jobs{
+	color: #656565;
+	text-decoration:none;
+}
+.jobs:hover{
+	color: #656565;
+	text-decoration:none;
+}
+.job-details-text {
+    color: #656565;
+    font-size: 14px;
+    margin-top: 3px;
+    margin-right: 10px;
+    line-height: 6px;
+}
+.btn-savejob{
+	 width:100%;
+    margin: 10px 0px;
 }
 

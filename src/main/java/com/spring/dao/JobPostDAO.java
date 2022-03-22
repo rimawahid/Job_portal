@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,12 +35,13 @@ public class JobPostDAO {
 		return jobPosts;
 	}
 	
-	public JobPost getProductById(int pid) {
-        String sql = "from jobpost where id = '" + pid + "'";
-        List<JobPost> catList = getSession().createQuery(sql).list();
-        return catList.get(0);
-
-    }
+	
+//	  public JobPost getProductById(int pid) { String sql =
+//	  "from jobpost where id = '" + pid + "'"; List<JobPost> catList =
+//	  getSession().createQuery(sql).list(); return catList.get(0);
+//	  
+//	 }
+	 
 	
 	public JobPost update(JobPost jobPost) {
 		getSession().update(jobPost);
@@ -48,9 +50,33 @@ public class JobPostDAO {
 	}
 	
 	public JobPost delete(JobPost jobPost) {
-    	//String sql = "delete airport where id = '"+airport.getId()+"'";
         getSession().delete(jobPost);
         getSession().flush();
         return jobPost;
     }
+	
+	
+	public List<JobPost> getDetails(String title) {
+        String hqlQuery = "from jobpost where title = :title";
+        Query query = getSession().createQuery(hqlQuery);
+        query.setParameter("title", title);
+        
+      System.out.println("search" +title);
+        List<JobPost> jobpostList = query.list();
+        getSession().flush();
+      
+        return jobpostList;
+        }
+    
+		/* flight information */
+    
+    public JobPost getProductById(int pid) {
+        String sql = "from jobpost where id = '" + pid + "'";
+        List<JobPost> catList = getSession().createQuery(sql).list();
+        
+        return catList.get(0);
+
+    }
+
+	
 }
