@@ -3,6 +3,7 @@ package com.spring.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,14 @@ public class IndexController {
 	public ModelAndView index() {
 		return new ModelAndView("front-end/index");
 	}
+	
+	@RequestMapping(value = "/jobapply/{id}", method = RequestMethod.GET)
+	public ModelAndView jobapply(@PathVariable String id){
+        int pid = Integer.valueOf(id);
+        JobPost jobPost = jobPostService.getProductById(pid);
+        return new ModelAndView("front-end/proposals", "jobPost", jobPost);
+    }
+
 
 	@RequestMapping(value = "/findWork", method = RequestMethod.GET)
 	public ModelAndView findWork() {

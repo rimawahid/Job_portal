@@ -4,7 +4,7 @@
 		<div class="col-md-9">
 		
 			<div class="job-wrap border-right p-3">
-			<input type="hidden" name="id" value="${j.id}" /><br />
+<%-- 			<input type="hidden" name="id" value="${j.id}" /><br /> --%>
 				<h5>${jobPost.title}</h5>
 				<hr>
 
@@ -79,9 +79,9 @@
 		</div>
 		<div class="col-md-3">
 			<div class="mt-5 pb-2">
-				<button type="submit"
+				<a type="submit" href="/jobapply/${jobPost.id}"
 					class="btn btn-success rounded-pill btn-width mt-3 mb-4">Submit
-					a Proposal</button>
+					a Proposal</a>
 				<button type="submit"
 					class="btn btn-outline-success btn-savejob  rounded-pill pr-4 pl-4">Save
 					Job</button>

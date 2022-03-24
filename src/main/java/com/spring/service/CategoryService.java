@@ -10,11 +10,6 @@ import org.springframework.stereotype.Service;
 import com.spring.dao.CategoryDAO;
 import com.spring.model.Category;
 
-
-
-
-
-
 @Service(value = "CategoryService")
 public class CategoryService {
 	@Autowired
