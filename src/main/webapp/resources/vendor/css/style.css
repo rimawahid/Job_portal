@@ -162,3 +162,6 @@ a:hover {
 .btn-submit {
 	margin-left: 320px;
 }
+#jobInfo{
+	display: none;
+}

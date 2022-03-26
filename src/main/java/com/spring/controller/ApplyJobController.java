@@ -1,9 +1,12 @@
 package com.spring.controller;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,11 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-
 import com.spring.model.ApplyJob;
-
+import com.spring.model.Category;
 import com.spring.service.ApplyJobService;
-
 
 @RestController
 @RequestMapping(value = "applyjob")
@@ -27,24 +28,35 @@ public class ApplyJobController {
 	@Autowired
 	ApplyJobService applyJobService;
 	
-	
-	public static String uploadDirectory = System.getProperty("user.dir") + "/src/main/webapp/imagedata";
+
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
-	@ResponseBody
-	//public String saveStudent(Student stu,@RequestParam("img") MultipartFile file) 
-	public ModelAndView save(@ModelAttribute ApplyJob applyJob,@RequestParam("img") MultipartFile file){
-		
-		StringBuilder fileNames = new StringBuilder();
-		String filename=applyJob.getId() + file.getOriginalFilename().substring(file.getOriginalFilename().length()-4);
-		Path fileNameAndPath =Paths.get(uploadDirectory,filename);
+	public ModelAndView save(@ModelAttribute ApplyJob applyJob, @RequestParam("img") MultipartFile file) {
+		String fileName = file.getOriginalFilename().toString();
+		applyJob.setAttachment("/files/"+fileName);
 		try {
-			Files.write(fileNameAndPath, file.getBytes());
+			
+			File saveFile = new File("D:\\IDB\\Project\\job_portal\\src\\main\\webapp\\files", fileName);
+			InputStream input = file.getInputStream();
+			Files.copy(input, saveFile.toPath());
+			applyJobService.save(applyJob);
+//			System.out.println(fileName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		applyJob.setAttachment(filename);
-		applyJobService.save(applyJob);
+		
+		
+
 		return null;
 	}
+
+//	@RequestMapping(value = "/save", method = RequestMethod.POST)
+//	public ModelAndView save(@ModelAttribute("apply") ApplyJob applyJob) {
+//		//System.out.println(category.getCode());
+//		ApplyJob c = applyJobService.save(applyJob);
+//		
+//		return null;
+//	}
+	
+	
 }

@@ -19,12 +19,37 @@ public class ApplyJob {
 	@Column(name = "title")
 	private String title;
 	
+	@Column(name = "budget")
+	private String budget;
+	
 	@Column(name = "bidAmount")
 	private Double bidAmount;
 	
 	@Column(name = "deliveryTime")
 	private String deliveryTime;
 	
+	@Column(name = "freelancer")
+	private String freelancer;
+	
+	@Column(name = "proposalDate")
+	private String proposalDate;
+	
+	public String getFreelancer() {
+		return freelancer;
+	}
+
+	public void setFreelancer(String freelancer) {
+		this.freelancer = freelancer;
+	}
+
+	public String getProposalDate() {
+		return proposalDate;
+	}
+
+	public void setProposalDate(String proposalDate) {
+		this.proposalDate = proposalDate;
+	}
+
 	@Column(name = "description")
 	private String description;
 	
@@ -41,6 +66,14 @@ public class ApplyJob {
 	}
 
 	
+
+	public String getBudget() {
+		return budget;
+	}
+
+	public void setBudget(String budget) {
+		this.budget = budget;
+	}
 
 	public String getTitle() {
 		return title;
