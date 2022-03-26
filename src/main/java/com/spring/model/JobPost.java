@@ -36,13 +36,46 @@ public class JobPost {
 	@Column(name = "budgetType")
 	private String budgetType;
 	
-//	@Temporal(TemporalType.DATE)
+	@Column(name = "jobLength")
+	private String jobLength;
+	
+
+	public String getJobLength() {
+		return jobLength;
+	}
+
+	public void setJobLength(String jobLength) {
+		this.jobLength = jobLength;
+	}
+
+	public String getSkill() {
+		return skill;
+	}
+
+	public void setSkill(String skill) {
+		this.skill = skill;
+	}
+
+	public String getAttachment() {
+		return attachment;
+	}
+
+	public void setAttachment(String attachment) {
+		this.attachment = attachment;
+	}
+
 	@Column(name = "posted_time")
 	private Date posted_time;
 	
-//	@Temporal(TemporalType.DATE)
+
 	@Column(name = "delivery_deadline")
 	private Date delivery_deadline;
+	
+	@Column(name = "skill")
+	private String skill;
+	
+	@Column(name = "attachment")
+	private String attachment;
 
 	public Date getPosted_time() {
 		return posted_time;
