@@ -24,6 +24,17 @@ public class JobPost {
 	@Column(name = "category")
 	private String category;
 
+	@Column(name = "code")
+	private String code;
+	
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
 	@Column(name = "title")
 	private String title;
 

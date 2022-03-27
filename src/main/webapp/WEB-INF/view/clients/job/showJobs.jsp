@@ -6,6 +6,7 @@
 		<h1 style="text-align: center">All Jobs</h1>
 		<table class="table table-striped table-hover">
 			<tr>
+				<th>Code</th>
 				<th>Category Name</th>
 				<th>Title</th>
 				<th>Posted Time</th>
@@ -18,6 +19,7 @@
 			</tr>
 			<c:forEach items="${jobPosts}" var="jobPost">
 				<tr>
+					<td>${jobPost.code}</td>
 					<td>${jobPost.category}</td>
 					<td>${jobPost.title}</td>
 					<td>${jobPost.posted_time}</td>
@@ -25,10 +27,9 @@
 					<td>${jobPost.budgetType}</td>
 					<td>${jobPost.delivery_deadline}</td>
 					<td></td>
-					
-					<td><a href="/client/job/edit/${jobPost.id}">Edit</a></td> 
-					<td><a href="/client/job/delete/${jobPost.id}">Delete</a> 
-					</td>
+
+					<td><a href="/client/job/edit/${jobPost.id}">Edit</a></td>
+					<td><a href="/client/job/delete/${jobPost.id}">Delete</a></td>
 				</tr>
 			</c:forEach>
 

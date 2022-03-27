@@ -26,7 +26,7 @@
 				<div class="row">
 					<div class="col-md-4">
 						<h6>
-							<i class="fa-solid fa-clock pr-2"></i>Less than 30 hrs/week
+							<i class="fa-solid fa-clock pr-2"></i>Less than ${jobPost.jobLength}
 						</h6>
 						<p class="job-details-text ml-4">Hourly</p>
 					</div>
@@ -44,8 +44,8 @@
 							the most experienced freelancers</p>
 					</div>
 					<div class="col-md-4">
-						<h6><i class="fa-solid fa-clock-rotate-left pr-2"></i>$5.00-$8.00</h6>
-						<p class="job-details-text ml-4">Hourly</p>
+						<h6><i class="fa-solid fa-clock-rotate-left pr-2"></i>$${jobPost.budget}</h6>
+						<p class="job-details-text ml-4">${jobPost.budgetType}</p>
 					</div>
 				</div>
 				<hr>

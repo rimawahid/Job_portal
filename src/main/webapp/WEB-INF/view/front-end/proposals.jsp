@@ -10,18 +10,24 @@
 					until the project is awarded to someone.</p>
 				<form class="m-3" action="/applyjob/save" method="POST"
 					enctype='multipart/form-data'>
-					<div class="form-row" id="jobInfo">
-						<div class="form-group ">
-							<label for="title">Title</label> <input type="text"
-								class="form-control" id="title" name="title"
-								value="${jobPost.title}">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="title">Code</label> <input type="text"
+								class="form-control" id="jcode" name="jcode"
+								value="${jobPost.code}"> 
 						</div>
-						<div class="form-group ">
+						<div class="form-group col-md-6">
 							<label for="budget">Budget</label> <input type="text"
 								class="form-control" id="budget" name="budget"
 								value="${jobPost.budget}">
 						</div>
 					</div>
+					<!-- <div class="form-group row">
+						<label for="name" class="col-sm-3 col-form-label">Code:</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="code" name="code">
+						</div>
+					</div> -->
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="bidAmount">Bid Amount</label> <input type="text"
@@ -39,7 +45,8 @@
 								class="form-control" id="freelancer" name="freelancer">
 						</div>
 						<div class="form-group col-md-6">
-							<label for="deliveryTime">Proposal Date</label> <input type="text" class="form-control" id="proposalDate"
+							<label for="deliveryTime">Proposal Date</label> <input
+								type="text" class="form-control" id="proposalDate"
 								name="proposalDate">
 						</div>
 					</div>
@@ -71,19 +78,18 @@
 		$('#test').val($(this).val() * .5);
 	});
 
-	$("#show").click(function() {
-		$("#jobInfo").show();
-	});
-	
+// 	$("#show").click(function() {
+// 		$("#jobInfo").show();
+// 	});
+
 	var today = new Date();
 	var dd = String(today.getDate()).padStart(2, '0');
 	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 	var yyyy = today.getFullYear();
 	today = mm + '/' + dd + '/' + yyyy;
-	
+
 	$("#proposalDate").click(function() {
 		$("#proposalDate").val(today);
 	});
-	
 </script>
 

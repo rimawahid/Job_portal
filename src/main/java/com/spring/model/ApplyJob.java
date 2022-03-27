@@ -16,24 +16,38 @@ public class ApplyJob {
 	@Column(name = "id")
 	private int id;
 
-	@Column(name = "title")
-	private String title;
-	
+	@Column(name = "jcode")
+	private String jcode;
+
 	@Column(name = "budget")
 	private String budget;
-	
+
 	@Column(name = "bidAmount")
 	private Double bidAmount;
-	
+
 	@Column(name = "deliveryTime")
 	private String deliveryTime;
-	
+
 	@Column(name = "freelancer")
 	private String freelancer;
-	
+
 	@Column(name = "proposalDate")
 	private String proposalDate;
-	
+
+	@Column(name = "description")
+	private String description;
+
+	@Column(name = "attachment")
+	private String attachment;
+
+	public String getJcode() {
+		return jcode;
+	}
+
+	public void setJcode(String jcode) {
+		this.jcode = jcode;
+	}
+
 	public String getFreelancer() {
 		return freelancer;
 	}
@@ -50,13 +64,6 @@ public class ApplyJob {
 		this.proposalDate = proposalDate;
 	}
 
-	@Column(name = "description")
-	private String description;
-	
-	@Column(name = "attachment")
-	private String attachment;
-	
-	
 	public int getId() {
 		return id;
 	}
@@ -65,22 +72,12 @@ public class ApplyJob {
 		this.id = id;
 	}
 
-	
-
 	public String getBudget() {
 		return budget;
 	}
 
 	public void setBudget(String budget) {
 		this.budget = budget;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
 	}
 
 	public Double getBidAmount() {
@@ -115,12 +112,4 @@ public class ApplyJob {
 		this.attachment = attachment;
 	}
 
-	
-
-	
-
-	
-
-	
-	
 }

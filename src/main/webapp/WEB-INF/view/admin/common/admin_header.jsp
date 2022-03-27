@@ -27,6 +27,8 @@
 <link rel="stylesheet" href="/resources/vendor/css/bootstrap.css">
 <link rel="stylesheet" href="/resources/vendor/css/style.css">
 
+<!-- datatable -->
+<link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
 </head>
 <body id="page-top">
 	<div id="wrapper">
