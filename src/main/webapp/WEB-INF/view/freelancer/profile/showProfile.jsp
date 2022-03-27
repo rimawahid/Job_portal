@@ -7,8 +7,8 @@
 			<div
 				class="d-flex justify-content-between pr-4 pl-4 pt-4 border-bottom">
 				<div class="d-flex justify-content-between">
-					<img>
-					<div>
+					<img src="/files/122.PNG" style="hight:100px; width:100PX;">
+					<div class="ml-2">
 						<h2>Mr A</h2>
 						<p>Narayanganj, Bangladesh</p>
 					</div>

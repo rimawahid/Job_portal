@@ -111,8 +111,8 @@
 
 					</div>
 				</div></li>
-
-			<!-- Divider -->
+				<!-- Nav Item - jobs -->
+				<!-- Divider -->
 			<hr class="sidebar-divider my-0">
 			<!-- Nav Item - website -->
 			<li class="nav-item"><a class="nav-link collapsed" href="#"
@@ -121,6 +121,27 @@
 			</a>
 				<div id="website" class="collapse" aria-labelledby="headingPages"
 					data-parent="#accordionSidebar"></div></li>
+						<!-- Divider -->
+			<hr class="sidebar-divider my-0">
+				<!-- Nav Item - Find
+						Work -->
+			<li class="nav-item"><a class="nav-link collapsed" href="#"
+				data-toggle="collapse" data-target="#profile" aria-expanded="true"
+				aria-controls="profile"> <i class="fas fa-fw fa-cog"></i> <span>Profile</span>
+			</a>
+				<div id="profile" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" href="buttons.html">Add Profile</a> <a
+							class="collapse-item" href="cards.html">Update Profile</a><a
+							class="collapse-item" href="/freelancer/profile">Show Profile</a>
+					</div>
+				</div></li>
+
+			<!-- Divider -->
+			<hr class="sidebar-divider my-0">
+
+			
 			<!-- Divider -->
 			<hr class="sidebar-divider my-0">
 
