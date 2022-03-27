@@ -12,13 +12,14 @@
 
 
 
- <!-- datatable javascript -->
-<script type="text/javascript" src="/resources/admin/vendor/datatables/jquery.dataTables.min.js"></script>
+ 
 <!-- jquery form javascript -->
 <script type="text/javascript" src="/resources/admin/vendor/ajax/jquery.form.min.js"></script>
+<!-- datatable javascript -->
+<script type="text/javascript" src="/resources/admin/vendor/datatables/jquery.dataTables.min.js"></script>
 
 
-<script src="/resources/vendor/js/jquery.js"></script>
+<!-- <script src="/resources/vendor/js/jquery.js"></script> -->
 <script src="/resources/vendor/js/bootstrap.js"></script>
 <script src="/resources/vendor/js/bootstrap.bundle.min.js"></script>
 

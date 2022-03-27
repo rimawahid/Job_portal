@@ -26,7 +26,7 @@
 					<td>${jobPost.budget}</td>
 					<td>${jobPost.budgetType}</td>
 					<td>${jobPost.delivery_deadline}</td>
-					<td></td>
+					<td>${jobPost.attachment}</td>
 
 					<td><a href="/client/job/edit/${jobPost.id}">Edit</a></td>
 					<td><a href="/client/job/delete/${jobPost.id}">Delete</a></td>
