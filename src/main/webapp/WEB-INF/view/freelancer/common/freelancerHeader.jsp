@@ -132,8 +132,8 @@
 				<div id="profile" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" href="buttons.html">Add Profile</a> <a
-							class="collapse-item" href="cards.html">Update Profile</a><a
+						<a class="collapse-item" href="/freelancer/profile/add">Add Profile</a> <a
+							class="collapse-item" href="">Update Profile</a><a
 							class="collapse-item" href="/freelancer/profile">Show Profile</a>
 					</div>
 				</div></li>
