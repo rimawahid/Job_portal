@@ -35,7 +35,7 @@
 					</div>
 					<div>
 						<h6>Hours per week</h6>
-						<p>more than 30 hrs/week</p>
+						<p>${fProfile.workTime}</p>
 					</div>
 					<div>
 						<h6>Languages</h6>

@@ -1,15 +1,10 @@
 package com.spring.service;
 
-import java.io.File;
-import java.io.IOException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
-
 import com.spring.dao.ApplyJobDAO;
 import com.spring.model.ApplyJob;
-import com.spring.model.Category;
+
 
 @Service(value = "applyJobService")
 public class ApplyJobService {

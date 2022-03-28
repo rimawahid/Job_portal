@@ -27,16 +27,14 @@ import com.spring.service.ApplyJobService;
 public class ApplyJobController {
 	@Autowired
 	ApplyJobService applyJobService;
-	
-
 
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public ModelAndView save(@ModelAttribute ApplyJob applyJob, @RequestParam("img") MultipartFile file) {
 		String fileName = file.getOriginalFilename().toString();
-		applyJob.setAttachment("/files/"+fileName);
+		applyJob.setAttachment("/files/" + fileName);
 		try {
-			
-			File saveFile = new File("C:\\Users\\B-10\\Documents\\GitHub\\job_portal\\src\\main\\webapp\\files", fileName);
+			File saveFile = new File("C:\\Users\\B-10\\Documents\\GitHub\\job_portal\\src\\main\\webapp\\files",
+					fileName);
 			InputStream input = file.getInputStream();
 			Files.copy(input, saveFile.toPath());
 			applyJobService.save(applyJob);
@@ -44,19 +42,7 @@ public class ApplyJobController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
-
 		return null;
 	}
 
-//	@RequestMapping(value = "/save", method = RequestMethod.POST)
-//	public ModelAndView save(@ModelAttribute("apply") ApplyJob applyJob) {
-//		//System.out.println(category.getCode());
-//		ApplyJob c = applyJobService.save(applyJob);
-//		
-//		return null;
-//	}
-	
-	
 }

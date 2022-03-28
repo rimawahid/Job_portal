@@ -34,15 +34,7 @@ public class JobPostDAO {
 		List<JobPost> jobPosts = getSession().createQuery(sql).list();
 		return jobPosts;
 	}
-	
-	
-//	  public JobPost getProductById(int pid) { String sql =
-//	  "from jobpost where id = '" + pid + "'"; List<JobPost> catList =
-//	  getSession().createQuery(sql).list(); return catList.get(0);
-//	  
-//	 }
-	 
-	
+		
 	public JobPost update(JobPost jobPost) {
 		getSession().update(jobPost);
 		getSession().flush();
@@ -60,14 +52,13 @@ public class JobPostDAO {
         String hqlQuery = "from jobpost where title = :title";
         Query query = getSession().createQuery(hqlQuery);
         query.setParameter("title", title);
-//		System.out.println("search" + title);
         List<JobPost> jobpostList = query.list();
         getSession().flush();
       
         return jobpostList;
         }
     
-		/* flight information */
+		
     
     public JobPost getProductById(int pid) {
         String sql = "from jobpost where id = '" + pid + "'";
