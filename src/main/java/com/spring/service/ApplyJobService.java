@@ -1,5 +1,7 @@
 package com.spring.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.spring.dao.ApplyJobDAO;
@@ -11,11 +13,11 @@ public class ApplyJobService {
 	@Autowired
 	ApplyJobDAO applyJobDAO;
 
-//	public ApplyJob save(ApplyJob applyJob, MultipartFile file) throws IllegalStateException, IOException {
-//		file.transferTo(new File("D:\\IDB\\Project\\job_portal\\src\\main\\webapp\\files"+ file.getOriginalFilename()));
-//		return applyJobDAO.save(applyJob);
-//	}
 	public ApplyJob save(ApplyJob applyJob){
         return applyJobDAO.save(applyJob);
+    }
+	
+	 public List<ApplyJob> getByJCode(String jcode) {
+         return applyJobDAO.getByJCode(jcode);
     }
 }

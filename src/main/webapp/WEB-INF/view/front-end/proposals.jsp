@@ -10,9 +10,14 @@
 					until the project is awarded to someone.</p>
 				<form class="m-3" action="/applyjob/save" method="POST"
 					enctype='multipart/form-data'>
+					<div class="form-group">
+							<input type="hidden"
+								class="form-control" id="title" name="title"
+								value="${jobPost.title}"> 
+						</div>
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<label for="title">Code</label> <input type="text"
+							<label for="jcode">Code</label> <input type="text"
 								class="form-control" id="jcode" name="jcode"
 								value="${jobPost.code}"> 
 						</div>

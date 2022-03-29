@@ -16,6 +16,10 @@ public class ApplyJob {
 	@Column(name = "id")
 	private int id;
 
+	
+	@Column(name = "title")
+	private String title;
+	
 	@Column(name = "jcode")
 	private String jcode;
 
@@ -46,6 +50,14 @@ public class ApplyJob {
 
 	public void setJcode(String jcode) {
 		this.jcode = jcode;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getFreelancer() {

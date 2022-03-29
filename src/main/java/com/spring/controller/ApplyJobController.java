@@ -33,8 +33,8 @@ public class ApplyJobController {
 		String fileName = file.getOriginalFilename().toString();
 		applyJob.setAttachment("/files/" + fileName);
 		try {
-			File saveFile = new File("C:\\Users\\B-10\\Documents\\GitHub\\job_portal\\src\\main\\webapp\\files",
-					fileName);
+			File saveFile = new File("D:\\IDB\\Project\\job_portal\\src\\main\\webapp\\files", fileName);
+			//File saveFile = new File("C:\\Users\\B-10\\Documents\\GitHub\\job_portal\\src\\main\\webapp\\files",fileName);
 			InputStream input = file.getInputStream();
 			Files.copy(input, saveFile.toPath());
 			applyJobService.save(applyJob);

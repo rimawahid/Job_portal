@@ -26,7 +26,8 @@
 <link href="/resources/admin/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="/resources/vendor/css/bootstrap.css">
 <link rel="stylesheet" href="/resources/vendor/css/style.css">
-
+<!-- datatable -->
+<link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
 </head>
 <body id="page-top">
 	<div id="wrapper">
@@ -86,10 +87,10 @@
 				<div id="users" class="collapse" aria-labelledby="headingUtilities"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" href="utilities-color.html">Job
+						<a class="collapse-item" href="/client/applications/jobapplications">Job
 							Applications</a> <a class="collapse-item"
-							href="utilities-border.html">Approved Applications</a> <a
-							class="collapse-item" href="utilities-animation.html">Rejected
+							href="/client/applications/approvedapplications">Approved Applications</a> <a
+							class="collapse-item" href="/client/applications/rejectedapplications">Rejected
 							Applications</a>
 
 					</div>

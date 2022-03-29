@@ -1,4 +1,4 @@
-
+<script src="https://kit.fontawesome.com/af9ec3b842.js" crossorigin="anonymous"></script>
 <!-- Bootstrap core JavaScript-->
 <script src="/resources/admin/vendor/jquery/jquery.min.js"></script>
 <script
