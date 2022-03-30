@@ -29,12 +29,12 @@ public class ApplyJobDAO {
 		return applyJob;
 	}
 	
-	public List<ApplyJob> getByJCode(String jcode) {
-        String hqlQuery = "from applyjob where jcode = :jcode";
+	public List<ApplyJob> getByTitle(String title) {
+        String hqlQuery = "from applyjob where title = :title";
         Query query = getSession().createQuery(hqlQuery);
-        query.setParameter("jcode", jcode);
+        query.setParameter("title", title);
         
-      System.out.println("search" +jcode);
+      System.out.println("search" +title);
         List<ApplyJob> flightList = query.list();
         getSession().flush();
       

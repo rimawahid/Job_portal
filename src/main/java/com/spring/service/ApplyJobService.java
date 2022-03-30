@@ -17,7 +17,7 @@ public class ApplyJobService {
         return applyJobDAO.save(applyJob);
     }
 	
-	 public List<ApplyJob> getByJCode(String jcode) {
-         return applyJobDAO.getByJCode(jcode);
+	 public List<ApplyJob> getByTitle(String title) {
+         return applyJobDAO.getByTitle(title);
     }
 }

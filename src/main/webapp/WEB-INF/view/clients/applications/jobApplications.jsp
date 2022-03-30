@@ -9,7 +9,7 @@
 		<div class="col-md-8">
 			<div class="col-sm-9">
 				<div class="d-flex justify-content-start">
-					<select id="inputState" class="form-control" name="category">
+					<select id="title" class="form-control" name="title">
 					<c:forEach items="${jobPosts}" var="jobPost"> 
 							<option value="${jobPost.title}">${jobPost.title}</option>
 					</c:forEach> 
@@ -27,7 +27,7 @@
 </form>
 
 <div class="container mt-4">
-	<table id="applicationTable" class="table table-striped table-hover">
+	<table id="tblShow" class="table table-striped table-hover">
 		<thead>
 			<tr>
 				<th>Freelancer</th>
@@ -39,17 +39,6 @@
 			</tr>
 		</thead>
 		<tbody>
-<%-- 			<c:forEach items="${users}" var="user"> --%>
-				<tr>
-					<td>${user.firstName}</td>
-					<td>${user.lastName}</td>
-					<td>${user.email}</td>
-					<td>${user.country}</td>
-					<td>${user.role}</td>
-
-					<td><a href="/user/delete/client/${user.id}">Delete</a></td>
-				</tr>
-<%-- 			</c:forEach> --%>
 		</tbody>
 	</table>
 </div>
@@ -57,9 +46,44 @@
 <%@include file="/WEB-INF/view/clients/common/clientFooter.jsp"%>
 
 <script>
-	$('#applicationTable').DataTable({
+	$('#tblShow').DataTable({
 		"paging" : true,
 		"ordering" : true,
 		"info" : true
 	});
+	
+// 	$('#title').change(function(){
+// 		console.log($("#title :selected").val());
+// 	})
+
+
+$(document).ready(function() {
+		callMe();
+		$("#title").change(function() {
+			callMe();
+		});
+	});
+	
+	
+// 	/* load subcategory */
+	function callMe(){
+		$.post( "/client/applications/searchTitle/"+$("#title :selected").val(), function( data ) {
+			
+			console.log(data.length);
+			$("#tblShow tbody").html("");
+			var html = "";
+			for (i = 0; i < data.length; i++) {
+				html += "<tr>";
+				html += "<td>" + data[i].freelancer + "</td>";
+				html += "<td>" + data[i].bidAmount + "</td>";
+				html += "<td>" + data[i].budget + "</td>";
+				html += "<td>" + data[i].proposalDate + "</td>";
+				html += "<td><button class='btn btn-success'><a href='/product/edit/"+data[i].id+"'>Approved</a></button></td>";
+				html += "<td><button class='btn btn-danger'><a href='/product/delete/"+data[i].id+"'>Rejected</a></button></td>";
+				html += "</tr>";
+			}
+			$("#tblShow tbody").html(html);
+		});
+	}
+	
 </script>
