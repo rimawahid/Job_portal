@@ -4,6 +4,11 @@
 	<div class="container">
 		<h2 class="text-center ">Add Profile</h2>
 
+
+<div id="container"></div>
+<button id="demo"></button>
+
+
 		<form class="border p-3 mb-5" action="/freelancer/profile/save" method="POST"
 			enctype="multipart/form-data">
 			<div class="form-group">
@@ -183,4 +188,22 @@
 	$('#hourlyRate').change(function() {
 		$('#freelancerReceive').val($(this).val()-($(this).val() * .20));
 	});
+	
+	
+	
+	
+	let text = "How are you doing today?";
+	const myArray = text.split(" ");
+	const len = myArray.length;
+	console.log(myArray.length);
+	for (let index = 0; index < len; index++) {
+	  console.log( myArray[index]);
+	  //document.getElementById("demo").innerHTML += myArray[index]+"<br>";
+	  var a = myArray[index].val();
+	  console.log(a);
+	$(document).ready(function() {
+	    $('#container').append('<button class="btn-styled" type="button">'+a+'</button>');
+	});
+	}
+	
 </script>

@@ -27,13 +27,14 @@
 </form>
 
 <div class="container mt-4">
-	<table id="tblShow" class="table table-striped table-hover">
+	<table id="tblShow" class="table table-striped table-hover text-center">
 		<thead>
 			<tr>
 				<th>Freelancer</th>
 				<th>Bid-Amount</th>
 				<th>budget</th>
 				<th>Proposal Date</th>
+				<th>deliveryTime</th>
 				<th>Approved Action</th>
 				<th>Rejected Action</th>
 			</tr>
@@ -78,8 +79,9 @@ $(document).ready(function() {
 				html += "<td>" + data[i].bidAmount + "</td>";
 				html += "<td>" + data[i].budget + "</td>";
 				html += "<td>" + data[i].proposalDate + "</td>";
-				html += "<td><button class='btn btn-success'><a href='/product/edit/"+data[i].id+"'>Approved</a></button></td>";
-				html += "<td><button class='btn btn-danger'><a href='/product/delete/"+data[i].id+"'>Rejected</a></button></td>";
+				html += "<td>" + data[i].deliveryTime + "</td>";
+				html += "<td><button class='btn btn-success '><a class='text-white' href='/client/applications//approvedapplications'>Approved</a></button></td>";
+				html += "<td><button class='btn btn-danger'><a class='text-white' href='/product/delete/"+data[i].id+"'>Rejected</a></button></td>";
 				html += "</tr>";
 			}
 			$("#tblShow tbody").html(html);

@@ -33,11 +33,7 @@ public class JobApplication {
 	}
 	
 	
-	//search subcategory through category
-		@RequestMapping(value = "/searchTitle/{title}", method = RequestMethod.POST)
-		public List<ApplyJob> getValue(HttpServletRequest request, @PathVariable("title") String title) {
-			return applyJobService.getByTitle(title);
-		}
+	
 		
 		
 	
@@ -47,6 +43,15 @@ public class JobApplication {
 	public ModelAndView approvedApplications() {
 		return new ModelAndView("clients/applications/approvedApplications");
 	}
+	
+	//search subcategory through category
+			@RequestMapping(value = "/searchTitle/{title}", method = RequestMethod.POST)
+			public List<ApplyJob> getValue(HttpServletRequest request, @PathVariable("title") String title) {
+				return applyJobService.getByTitle(title);
+			}
+	
+	
+	
 	
 	@RequestMapping(value = "/rejectedapplications", method = RequestMethod.GET)
 	public ModelAndView rejectedApplications() {
