@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.spring.model.Category;
 import com.spring.model.JobPost;
+import com.spring.service.CategoryService;
 import com.spring.service.JobPostService;
 
 @RestController
@@ -17,10 +19,15 @@ public class IndexController {
 
 	@Autowired
 	JobPostService jobPostService;
+	
+	@Autowired
+	CategoryService categoryService;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView index() {
-		return new ModelAndView("front-end/index");
+		List<Category> categories = categoryService.getAll();
+		//return new ModelAndView("admin/categories/showCategories", "categories", categories);
+		return new ModelAndView("front-end/index", "categories", categories);
 	}
 	
 	@RequestMapping(value = "/jobapply/{id}", method = RequestMethod.GET)
@@ -36,6 +43,14 @@ public class IndexController {
 		List<JobPost> jobPosts = jobPostService.getAll();
 		return new ModelAndView("front-end/latestJobs", "jobPosts", jobPosts);
 	}
+	
+	
+	/* For show */
+//	@RequestMapping(value = "/show", method = RequestMethod.GET)
+//	public ModelAndView view() {
+//		List<Category> categories = categoryService.getAll();
+//		return new ModelAndView("admin/categories/showCategories", "categories", categories);
+//	}
 	/*
 	 * For show
 	 * 

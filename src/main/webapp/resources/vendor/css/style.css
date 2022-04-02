@@ -146,7 +146,6 @@ a:hover {
 	margin: 10px 0px;
 }
 
-
 .budget {
 	margin-top: -5px;
 }
@@ -162,6 +161,14 @@ a:hover {
 .btn-submit {
 	margin-left: 320px;
 }
-#jobInfo{
+
+#jobInfo {
 	display: none;
+}
+
+.skill-aligne {
+	margin-right: 20px;
+}
+.category-height {
+    height: 130px;
 }

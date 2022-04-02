@@ -61,12 +61,15 @@ $(document).ready(function() {
 		});
 	});
 	
-	
+
 // 	/* load subcategory */
 	function callMe(){
+
 		$.post( "/client/applications/searchTitle/"+$("#title :selected").val(), function( data ) {
 			
 			console.log(data.length);
+		
+
 			$("#tblShow tbody").html("");
 			var html = "";
 			for (i = 0; i < data.length; i++) {
@@ -76,16 +79,13 @@ $(document).ready(function() {
 				html += "<td>" + data[i].budget + "</td>";
 				html += "<td>" + data[i].proposalDate + "</td>";
 				html += "<td>" + data[i].deliveryTime + "</td>";
-				html += "<td><button class='btn btn-success'><a class='text-white' href='/client/applications/"+data[i].id+"' >Approved</a></button></td>";
-				html += "<td><button class='btn btn-danger'><a class='text-white' href='/product/delete/"+data[i].id+"'>Rejected</a></button></td>";
+				html += "<td><button class='btn btn-success'><a class='text-white' href='/client/applications/approved/"+data[i].id+"' >Approved</a></button></td>";
+				html += "<td><button class='btn btn-danger'><a class='text-white' href='/client/applications/"+data[i].id+"'>Rejected</a></button></td>";
 				html += "</tr>";
 			}
 			$("#tblShow tbody").html(html);
-			$('#tblShow').DataTable({
-				"paging" : true,
-				"ordering" : true,
-				"info" : true
-			});
+			$('#tblShow').DataTable();
+	
 		});
 	}
 	

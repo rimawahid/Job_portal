@@ -14,6 +14,7 @@
 				<th>budget</th>
 				<th>Proposal Date</th>
 				<th>deliveryTime</th>
+				<th>Status</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -25,6 +26,7 @@
 					<td>${approved.budget}</td>
 					<td>${approved.proposalDate}</td>
 					<td>${approved.deliveryTime}</td>
+					<td>${approved.status}</td>
 				</tr>
 			</c:forEach>
 		</tbody>
