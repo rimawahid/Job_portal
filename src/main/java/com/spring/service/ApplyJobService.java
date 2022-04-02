@@ -6,18 +6,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.spring.dao.ApplyJobDAO;
 import com.spring.model.ApplyJob;
-
+import com.spring.model.JobPost;
+import com.spring.model.User;
 
 @Service(value = "applyJobService")
 public class ApplyJobService {
 	@Autowired
 	ApplyJobDAO applyJobDAO;
 
-	public ApplyJob save(ApplyJob applyJob){
-        return applyJobDAO.save(applyJob);
-    }
+	public ApplyJob save(ApplyJob applyJob) {
+		return applyJobDAO.save(applyJob);
+	}
+
+	public List<ApplyJob> getByTitle(String title) {
+		return applyJobDAO.getByTitle(title);
+	}
+
+	public ApplyJob getById(int pid) {
+		return applyJobDAO.getById(pid);
+	}
+
+	public ApplyJob approvedStatus(ApplyJob approved) {
+		return applyJobDAO.approvedStatus(approved);
+	}
 	
-	 public List<ApplyJob> getByTitle(String title) {
-         return applyJobDAO.getByTitle(title);
-    }
+	public List<ApplyJob> findByApproved(String status) {
+		return applyJobDAO.findByApproved(status);
+}
 }

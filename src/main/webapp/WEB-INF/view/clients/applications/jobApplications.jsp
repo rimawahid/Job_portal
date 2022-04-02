@@ -45,13 +45,9 @@
 </div>
 
 <%@include file="/WEB-INF/view/clients/common/clientFooter.jsp"%>
-
+<%-- <%@include file="/resources/vendor/js/common.js"%> --%>
 <script>
-	$('#tblShow').DataTable({
-		"paging" : true,
-		"ordering" : true,
-		"info" : true
-	});
+	
 	
 // 	$('#title').change(function(){
 // 		console.log($("#title :selected").val());
@@ -80,11 +76,16 @@ $(document).ready(function() {
 				html += "<td>" + data[i].budget + "</td>";
 				html += "<td>" + data[i].proposalDate + "</td>";
 				html += "<td>" + data[i].deliveryTime + "</td>";
-				html += "<td><button class='btn btn-success '><a class='text-white' href='/client/applications//approvedapplications'>Approved</a></button></td>";
+				html += "<td><button class='btn btn-success'><a class='text-white' href='/client/applications/"+data[i].id+"' >Approved</a></button></td>";
 				html += "<td><button class='btn btn-danger'><a class='text-white' href='/product/delete/"+data[i].id+"'>Rejected</a></button></td>";
 				html += "</tr>";
 			}
 			$("#tblShow tbody").html(html);
+			$('#tblShow').DataTable({
+				"paging" : true,
+				"ordering" : true,
+				"info" : true
+			});
 		});
 	}
 	
