@@ -23,15 +23,15 @@
 
 <section>
 	<div class="container mb-5">
-		<h1>Browse talent by category</h1>
-		<p>
-			Looking for work? <span><a> Browse jobs</a></span>
+		<h1 class=category-heading>Browse talent by category</h1>
+		<p class="text">
+			Looking for work? <span ><a style="color:#16A902" href=""> Browse jobs</a></span>
 		</p>
 
 		<div class="row mt-5">
 		<c:forEach items="${categories}" var="category">
-			<div class="col-md-3 mb-4">
-				<div class="border p-3 category-height">
+			<div class="col-md-3 mb-4 ">
+				<div class="p-3 category-height category-card">
 					<h4>${category.name}</h4>
 					<div class="d-flex justify-content-between skill-aligne">
 						<p><i
@@ -41,77 +41,7 @@
 				</div>
 			</div>
 			</c:forEach>
-<!-- 			<div class="col-md-3  mb-4"> -->
-<!-- 				<div class=" border p-3 category-height"> -->
-<!-- 					<h4>Design & Creative</h4> -->
-<!-- 					<div class="d-flex justify-content-between skill-aligne"> -->
-<!-- 						<p><i -->
-<!-- 						class="fa-solid fa-star star-color"></i>4.91/5</p> -->
-<!-- 						<p class="">968 skills</p> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-3  mb-4"> -->
-<!-- 				<div class=" border p-3 category-height"> -->
-<!-- 					<h4>Sales & Marketing</h4> -->
-<!-- 					<div class="d-flex justify-content-between skill-aligne"> -->
-<!-- 						<p><i -->
-<!-- 						class="fa-solid fa-star star-color"></i>4.77/5</p> -->
-<!-- 						<p class="">1853 skills</p> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-3 mb-4"> -->
-<!-- 				<div class="border p-3 category-height"> -->
-<!-- 					<h4>Writing & Translation</h4> -->
-<!-- 					<div class="d-flex justify-content-between skill-aligne"> -->
-<!-- 						<p><i -->
-<!-- 						class="fa-solid fa-star star-color"></i>4.92/5</p> -->
-<!-- 						<p class="">505 skills</p> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-3 mb-4"> -->
-<!-- 				<div class=" border p-3 category-height"> -->
-<!-- 					<h4>Admin & Customer support</h4> -->
-<!-- 					<div class="d-flex justify-content-between skill-aligne"> -->
-<!-- 						<p><i -->
-<!-- 						class="fa-solid fa-star star-color"></i>4.77/5</p> -->
-<!-- 						<p class="">508 skills</p> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-3 mb-4"> -->
-<!-- 				<div class=" border p-3 category-height"> -->
-<!-- 					<h4>Engineering & Architecture</h4> -->
-<!-- 					<div class="d-flex justify-content-between skill-aligne"> -->
-<!-- 						<p><i -->
-<!-- 						class="fa-solid fa-star star-color"></i>4.77/5</p> -->
-<!-- 						<p class="">650 skills</p> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-3 mb-4"> -->
-<!-- 				<div class=" border p-3 category-height"> -->
-<!-- 					<h4>Finance & Accounting</h4> -->
-<!-- 					<div class="d-flex justify-content-between skill-aligne"> -->
-<!-- 						<p><i -->
-<!-- 						class="fa-solid fa-star star-color"></i>4.77/5</p> -->
-<!-- 						<p class="">214 skills</p> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 			<div class="col-md-3 mb-4"> -->
-<!-- 				<div class=" border p-3 category-height"> -->
-<!-- 					<h4>Legal</h4> -->
-<!-- 					<div class="d-flex justify-content-between skill-aligne"> -->
-<!-- 						<p><i -->
-<!-- 						class="fa-solid fa-star star-color"></i>4.77/5</p> -->
-<!-- 						<p class="">133 skills</p> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
+
 
 	</div>
 </section>

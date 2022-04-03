@@ -169,6 +169,28 @@ a:hover {
 .skill-aligne {
 	margin-right: 20px;
 }
-.category-height {
-    height: 130px;
+
+.category-heading {
+	font-size: 56px;
+	color: #001e00;
+	line-height: 54px;
+	font-weight: 500;
+}
+
+.text {
+	font-size: 16px;
+	color: #5e6d55;
+	line-height: 18px;
+}
+
+.category-card {
+	height: 130px;
+	background: #f2f7f2;
+	border-radius: 10px;
+}
+
+.category-card:hover {
+	background: #E4EBE4;
+	border-radius: 10px;
+	cursor: pointer;
 }
