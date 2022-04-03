@@ -44,25 +44,40 @@
 				</div>
 			</c:forEach>
 		</div>
-		</div>
+	</div>
 </section>
 
 <section>
-	<div class="container">
-		<h2>For Clients</h2>
-		<h1 class=category-heading>Find talent your way</h1>
-		<p>Work with the largest network of independent professionals and
-			get things done from quick turnarounds to big transformations.</p>
-	<div class="row">
-	<div class="col-md-4 client-card">
-		<h3>Post a job <br> and hire a pro</h3>
-		<p>Talent Marketplace</p>
-	</div>
-	<div class="col-md-4"></div>
-	<div class="col-md-4"></div>
-	</div>
-	
-	
+	<div class="container client-banner mb-5">
+		<h2 style="color: #fff; margin-left:15px;" class="pt-4">For Clients</h2>
+		<h1 class=client-heading>
+			Find talent <br>your way
+		</h1>
+		<p class="client-text">Work with the largest network of
+			independent professionals and get things done from quick turnarounds
+			to big transformations.</p>
+		<div class="row pb-5">
+			<div class="col-md-4">
+				<div class="client-card">
+					<h3 class="Cheading">Post a job <br> and hire a pro</h3>
+					<p class="Ctext">Talent Marketplace<sup>TM</sup></p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="client-card ">
+					<h3 class="Cheading">Browse and <br>buy projects</h3>
+					<p class="Ctext">Project Catalog<sup>TM</sup></p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="client-card pr-5">
+					<h3 class="Cheading">Let us help you find <br>the right talent</h3>
+					<p class="Ctext">Talent Scout<sup>TM</sup></p>
+				</div>
+			</div>
+		</div>
+
+
 	</div>
 </section>
 

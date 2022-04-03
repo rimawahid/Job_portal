@@ -194,10 +194,52 @@ a:hover {
 	border-radius: 10px;
 	cursor: pointer;
 }
+
 .client-card {
-    background: #14A800;
-    color: #fff;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 20px;
+	background: #14A800;
+	color: #fff;
+	border-radius: 10px;
+	padding:10px  20px;
+	margin: 0px 20px 0px 10px;
+	width: 330px;
+}
+.client-card:hover{
+	background:#fff;
+	color:#14a800;
+}
+
+.client-banner {
+	background-image: url("/resources/images/client-banner.jpg");
+	background-position: center;
+	border-radius: 10px;
+
+}
+
+.client-heading {
+	font-size: 72px;
+ 	color: #fff; 
+	line-height: 72px;
+	font-weight: 400;
+	margin-top: 70px;
+	margin-left: 15px;
+}
+.Cheading {
+    font-size: 29px;
+    line-height: 36px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.Ctext{
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 500;
+}
+.client-text {
+	color: #fff;
+	font-size: 18px;
+	line-height: 24px;
+	width: 370px;
+	margin-top: 50px;
+	margin-left: 15px;
+	margin-bottom: 25px;
 }
