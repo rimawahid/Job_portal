@@ -194,3 +194,10 @@ a:hover {
 	border-radius: 10px;
 	cursor: pointer;
 }
+.client-card {
+    background: #14A800;
+    color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}

@@ -25,24 +25,44 @@
 	<div class="container mb-5">
 		<h1 class=category-heading>Browse talent by category</h1>
 		<p class="text">
-			Looking for work? <span ><a style="color:#16A902" href=""> Browse jobs</a></span>
+			Looking for work? <span><a style="color: #16A902" href="">
+					Browse jobs</a></span>
 		</p>
 
 		<div class="row mt-5">
-		<c:forEach items="${categories}" var="category">
-			<div class="col-md-3 mb-4 ">
-				<div class="p-3 category-height category-card">
-					<h4>${category.name}</h4>
-					<div class="d-flex justify-content-between skill-aligne">
-						<p><i
-						class="fa-solid fa-star star-color"></i>4.85/5</p>
-						<p class="">1853 skills</p>
+			<c:forEach items="${categories}" var="category">
+				<div class="col-md-3 mb-4 ">
+					<div class="p-3 category-height category-card">
+						<h4>${category.name}</h4>
+						<div class="d-flex justify-content-between skill-aligne">
+							<p>
+								<i class="fa-solid fa-star star-color"></i>4.85/5
+							</p>
+							<p class="">1853 skills</p>
+						</div>
 					</div>
 				</div>
-			</div>
 			</c:forEach>
+		</div>
+		</div>
+</section>
 
-
+<section>
+	<div class="container">
+		<h2>For Clients</h2>
+		<h1 class=category-heading>Find talent your way</h1>
+		<p>Work with the largest network of independent professionals and
+			get things done from quick turnarounds to big transformations.</p>
+	<div class="row">
+	<div class="col-md-4 client-card">
+		<h3>Post a job <br> and hire a pro</h3>
+		<p>Talent Marketplace</p>
+	</div>
+	<div class="col-md-4"></div>
+	<div class="col-md-4"></div>
+	</div>
+	
+	
 	</div>
 </section>
 
