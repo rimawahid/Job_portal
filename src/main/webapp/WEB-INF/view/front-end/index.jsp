@@ -60,19 +60,19 @@
 			<div class="col-md-4">
 				<div class="client-card">
 					<h3 class="Cheading">Post a job <br> and hire a pro</h3>
-					<p class="Ctext">Talent Marketplace<sup>TM</sup></p>
+					<p class="Ctext">Talent Marketplace<sup>TM </sup><i class="fa-solid fa-arrow-right-long"></i></p>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="client-card ">
 					<h3 class="Cheading">Browse and <br>buy projects</h3>
-					<p class="Ctext">Project Catalog<sup>TM</sup></p>
+					<p class="Ctext">Project Catalog<sup>TM </sup><i class="fa-solid fa-arrow-right-long"></i></p>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="client-card pr-5">
 					<h3 class="Cheading">Let us help you find <br>the right talent</h3>
-					<p class="Ctext">Talent Scout<sup>TM</sup></p>
+					<p class="Ctext">Talent Scout<sup>TM </sup><i class="fa-solid fa-arrow-right-long"></i></p>
 				</div>
 			</div>
 		</div>

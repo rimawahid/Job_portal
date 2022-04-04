@@ -1,7 +1,5 @@
 package com.spring.model;
 
-
-
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -26,7 +24,7 @@ public class JobPost {
 
 	@Column(name = "code")
 	private String code;
-	
+
 	public String getCode() {
 		return code;
 	}
@@ -46,10 +44,32 @@ public class JobPost {
 
 	@Column(name = "budgetType")
 	private String budgetType;
-	
+
 	@Column(name = "jobLength")
 	private String jobLength;
-	
+
+	@Column(name = "posted_time")
+	private Date posted_time;
+
+	@Column(name = "delivery_deadline")
+	private Date delivery_deadline;
+
+	@Column(name = "skill")
+	private String skill;
+
+	@Column(name = "attachment")
+	private String attachment;
+
+	@Column(name = "status")
+	private String status = "posted";
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 	public String getJobLength() {
 		return jobLength;
@@ -74,19 +94,6 @@ public class JobPost {
 	public void setAttachment(String attachment) {
 		this.attachment = attachment;
 	}
-
-	@Column(name = "posted_time")
-	private Date posted_time;
-	
-
-	@Column(name = "delivery_deadline")
-	private Date delivery_deadline;
-	
-	@Column(name = "skill")
-	private String skill;
-	
-	@Column(name = "attachment")
-	private String attachment;
 
 	public Date getPosted_time() {
 		return posted_time;
@@ -152,10 +159,4 @@ public class JobPost {
 		this.budgetType = budgetType;
 	}
 
-	
-
-	
-	
-	
-	
 }

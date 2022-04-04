@@ -45,7 +45,12 @@ public class ApplyJob {
 	private String attachment;
 
 	@Column(name = "status")
-	private String status;
+	private String status="pending";
+
+
+	public String getJcode() {
+		return jcode;
+	}
 
 	public String getStatus() {
 		return status;
@@ -53,10 +58,6 @@ public class ApplyJob {
 
 	public void setStatus(String status) {
 		this.status = status;
-	}
-
-	public String getJcode() {
-		return jcode;
 	}
 
 	public void setJcode(String jcode) {
