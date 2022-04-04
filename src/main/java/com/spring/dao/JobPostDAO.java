@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.spring.model.ApplyJob;
 import com.spring.model.Category;
 import com.spring.model.JobPost;
 
@@ -30,6 +31,12 @@ public class JobPostDAO {
 	}
 	
 	public List<JobPost> getAll() {
+		String sql = "from jobpost";
+		List<JobPost> jobPosts = getSession().createQuery(sql).list();
+		return jobPosts;
+	}
+	
+	public List<JobPost> getByStatus() {
 		String sql = "from jobpost where status = 'posted'";
 		List<JobPost> jobPosts = getSession().createQuery(sql).list();
 		return jobPosts;
@@ -54,18 +61,21 @@ public class JobPostDAO {
         query.setParameter("title", title);
         List<JobPost> jobpostList = query.list();
         getSession().flush();
-      
         return jobpostList;
         }
-    
-		
     
     public JobPost getProductById(int pid) {
         String sql = "from jobpost where id = '" + pid + "'"  ;
         List<JobPost> catList = getSession().createQuery(sql).list();  
         return catList.get(0);
-
     }
 
+//    public JobPost updateStatus(JobPost jobPost) {
+//		String hql = "update jobpost set status ='on process' where id = '" + jobPost.getId() + "'";
+//		Query q = getSession().createQuery(hql);
+//		q.executeUpdate();
+//		getSession().flush();
+//		return (JobPost) jobPost;
+//	}
 	
 }

@@ -40,7 +40,7 @@ public class IndexController {
 
 	@RequestMapping(value = "/findWork", method = RequestMethod.GET)
 	public ModelAndView findWork() {
-		List<JobPost> jobPosts = jobPostService.getAll();
+		List<JobPost> jobPosts = jobPostService.getByStatus();
 		return new ModelAndView("front-end/latestJobs", "jobPosts", jobPosts);
 	}
 	

@@ -13,6 +13,9 @@ import com.spring.model.User;
 public class ApplyJobService {
 	@Autowired
 	ApplyJobDAO applyJobDAO;
+	
+	@Autowired
+	JobPostService jobPostService;
 
 	public ApplyJob save(ApplyJob applyJob) {
 		return applyJobDAO.save(applyJob);
@@ -27,6 +30,7 @@ public class ApplyJobService {
 	}
 
 	public ApplyJob approvedStatus(ApplyJob approved) {
+		//jobPostService.updateStatus(null);
 		return applyJobDAO.approvedStatus(approved);
 	}
 	

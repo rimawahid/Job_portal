@@ -57,11 +57,11 @@
 					</div>
 					<div class="form-group col-md-4">
 						<label for="serviceFee">20% Service Fee:</label><input
-					type="text" class="form-control mt-4" placeholder="/hr" id="serviceFee" name="serviceFee">
+					type="text" class="form-control mt-4" placeholder="/hr" id="serviceFee" name="serviceFee" readonly>
 					</div>
 					<div class="form-group col-md-4">
 						<label for="freelancerReceive">You'll Receive:</label><br> <small>The estimated amount you'll receive after service fees </small> <input
-					type="text" class="form-control" placeholder="/hr" id="freelancerReceive" name="freelancerReceive">
+					type="text" class="form-control" placeholder="/hr" id="freelancerReceive" name="freelancerReceive" readonly>
 					</div>
 				</div>
 			</div>
