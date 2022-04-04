@@ -13,7 +13,7 @@ import com.spring.model.User;
 public class ApplyJobService {
 	@Autowired
 	ApplyJobDAO applyJobDAO;
-	
+
 	@Autowired
 	JobPostService jobPostService;
 
@@ -30,11 +30,12 @@ public class ApplyJobService {
 	}
 
 	public ApplyJob approvedStatus(ApplyJob approved) {
-		//jobPostService.updateStatus(null);
+		JobPost jpost = jobPostService.getBYTitle(approved.getTitle());
+		jobPostService.updateStatus(jpost);
 		return applyJobDAO.approvedStatus(approved);
 	}
-	
+
 	public List<ApplyJob> findByApproved(String status) {
 		return applyJobDAO.findByApproved(status);
-}
+	}
 }

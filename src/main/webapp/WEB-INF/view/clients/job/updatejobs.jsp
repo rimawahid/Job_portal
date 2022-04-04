@@ -1,7 +1,7 @@
 <%@include file="/WEB-INF/view/clients/common/clientHeader.jsp"%>
 
 <div class="container-fluid">
-	<h2 class="text-center ">Post a new job</h2>
+	<h2 class="text-center ">Update a new job</h2>
 
 
 	<div class="row">
@@ -29,13 +29,13 @@
 							value="${j.description}" name="description" rows="3">${j.description}</textarea>
 					</div>
 				</div>
-				
+
 				<div class="form-group row">
-					<label for="name" class="col-sm-3 col-form-label">posted Time:</label>
+					<label for="name" class="col-sm-3 col-form-label">posted
+						Time:</label>
 					<div class="col-sm-9">
-						<input type="date" value="${j.posted_time}"
-							class="form-control" id="posted_time"
-							name="posted_time" >
+						<input type="date" value="${j.posted_time}" class="form-control"
+							id="posted_time" name="posted_time">
 					</div>
 				</div>
 
@@ -73,13 +73,21 @@
 							name="atttachment">
 					</div>
 				</div>
+				
 				<input type="hidden" name="id" value="${j.id}" /><br />
 				<button type="submit" class="btn btn-save rounded-pill  mt-3 mb-4">Update
 					job</button>
 
 
 			</form>
+			
+			
 		</div>
 		<div class="col-md-2"></div>
 	</div>
 </div>
+
+<script>
+const val = document.getElementById("img").value;
+console.log(${j.atttachment})
+</script>

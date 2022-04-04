@@ -37,7 +37,7 @@ public class JobPostDAO {
 	}
 	
 	public List<JobPost> getByStatus() {
-		String sql = "from jobpost where status = 'posted'";
+		String sql = "from jobpost where status != 'done'";
 		List<JobPost> jobPosts = getSession().createQuery(sql).list();
 		return jobPosts;
 	}
@@ -69,13 +69,22 @@ public class JobPostDAO {
         List<JobPost> catList = getSession().createQuery(sql).list();  
         return catList.get(0);
     }
+    
+    
+    
+    
+    public JobPost getByTitle(String title) {
+        String sql = "from jobpost where title = '" + title + "'"  ;
+        List<JobPost> catList = getSession().createQuery(sql).list();  
+        return catList.get(0);
+    }
 
-//    public JobPost updateStatus(JobPost jobPost) {
-//		String hql = "update jobpost set status ='on process' where id = '" + jobPost.getId() + "'";
-//		Query q = getSession().createQuery(hql);
-//		q.executeUpdate();
-//		getSession().flush();
-//		return (JobPost) jobPost;
-//	}
+    public JobPost updateStatus(JobPost jobPost) {
+		String hql = "update jobpost set status ='on process' where title = '" + jobPost.getTitle() + "'";
+		Query q = getSession().createQuery(hql);
+		q.executeUpdate();
+		getSession().flush();
+		return (JobPost) jobPost;
+	}
 	
 }

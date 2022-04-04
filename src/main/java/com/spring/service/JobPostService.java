@@ -45,8 +45,12 @@ public class JobPostService {
          return jobPostDAO.getDetails(title);
     }
 	 
-//	public JobPost updateStatus(JobPost jobPost) {
-//			return jobPostDAO.updateStatus(jobPost);
-//		}
+	 public JobPost getBYTitle(String title) {
+			return jobPostDAO.getByTitle(title);
+		}
+	 
+	public JobPost updateStatus(JobPost jobPost) {
+			return jobPostDAO.updateStatus(jobPost);
+		}
 	 
 }
