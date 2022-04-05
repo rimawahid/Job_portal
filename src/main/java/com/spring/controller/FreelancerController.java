@@ -27,6 +27,8 @@ public class FreelancerController {
 	public ModelAndView showProfile() {
 		return new ModelAndView("freelancer/profile/showProfile");
 	}
+	
+	
 	@RequestMapping(value = "/jobs", method = RequestMethod.GET)
 	public ModelAndView jobs() {
 		List<ApplyJob> applyJob = applyJobService.findByApproved(null);

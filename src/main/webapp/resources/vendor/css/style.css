@@ -243,3 +243,38 @@ a:hover {
 	margin-left: 15px;
 	margin-bottom: 25px;
 }
+footer{
+	background:#001E00;
+	color:#fff;
+}
+.f-text{
+	color:#fff;	
+}
+.f-link{
+	color:#fff;
+	margin-top:-5px;
+}
+.f-text:hover{
+	color:#fff;
+	
+}
+.social-link{
+	margin-left:30px;
+	margin-top:-5px;
+}
+.social-icon{
+	margin: 0px 2px;
+	padding: 7px;
+	border:1px solid #fff;
+	border-radius:50%
+}
+.h-line{
+	border-bottom:1px solid #fff;
+}
+.f-sign{
+	padding-right:20px;
+	border-right:1px solid #fff;
+}
+.mtop{
+	    margin-top: -9px;
+}
