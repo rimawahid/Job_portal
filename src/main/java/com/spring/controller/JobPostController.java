@@ -47,8 +47,8 @@ public class JobPostController {
 		String fileName = file.getOriginalFilename().toString();
 		jobpost.setAttachment("/files/job/" + fileName);
 		try {
-			//File saveFile = new File("D:\\IDB\\Project\\job_portal\\src\\main\\webapp\\files\\job", fileName);
-			File saveFile = new File("C:\\Users\\B-10\\Documents\\GitHub\\job_portal\\src\\main\\webapp\\files\\job", fileName);
+			File saveFile = new File("D:\\IDB\\Project\\job_portal\\src\\main\\webapp\\files\\job", fileName);
+			//File saveFile = new File("C:\\Users\\B-10\\Documents\\GitHub\\job_portal\\src\\main\\webapp\\files\\job", fileName);
 			InputStream input = file.getInputStream();
 			Files.copy(input, saveFile.toPath());
 			jobPostService.save(jobpost);
@@ -56,7 +56,8 @@ public class JobPostController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return null;
+		List<JobPost> jobPosts = jobPostService.getAll();
+		return new ModelAndView("clients/job/showJobs", "jobPosts", jobPosts);
 	}
 
 	/* For show */
