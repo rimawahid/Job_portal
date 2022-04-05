@@ -63,8 +63,7 @@
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item" href="buttons.html">Find Work</a> <a
 							class="collapse-item" href="cards.html">Saved Jobs</a> <a
-							class="collapse-item" href="buttons.html">Proposals </a> <a
-							class="collapse-item" href="/freelancer/profile">Profile</a>
+							class="collapse-item" href="buttons.html">Proposals </a> 
 					</div>
 				</div></li>
 
@@ -81,7 +80,7 @@
 				<div id="jobs" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" href="buttons.html">My Jobs</a> <a
+						<a class="collapse-item" href="/freelancer/jobs">My Jobs</a> <a
 							class="collapse-item" href="cards.html">All Contracts</a> <a
 							class="collapse-item" href="buttons.html">Work Diary </a>
 
