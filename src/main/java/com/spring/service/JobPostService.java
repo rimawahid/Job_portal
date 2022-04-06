@@ -11,6 +11,7 @@ import com.spring.dao.JobPostDAO;
 import com.spring.model.ApplyJob;
 import com.spring.model.Category;
 import com.spring.model.JobPost;
+import com.spring.model.User;
 
 @Service(value = "jobPostService")
 public class JobPostService {
@@ -52,5 +53,11 @@ public class JobPostService {
 	public JobPost updateStatus(JobPost jobPost) {
 			return jobPostDAO.updateStatus(jobPost);
 		}
+		
+	public List<JobPost> searchBySkills(String skill) {
+		return  jobPostDAO.searchBySkills(skill);
+	}
+	
+	
 	 
 }

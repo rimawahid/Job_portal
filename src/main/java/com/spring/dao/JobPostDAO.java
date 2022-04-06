@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.spring.model.ApplyJob;
 import com.spring.model.Category;
 import com.spring.model.JobPost;
+import com.spring.model.User;
 
 @Repository(value = "jobPostDAO")
 @Transactional
@@ -86,5 +87,16 @@ public class JobPostDAO {
 		getSession().flush();
 		return (JobPost) jobPost;
 	}
+    
+    
+//    search by skills
+    public List<JobPost> searchBySkills(String skill) {
+		String sql = "from jobpost where skill = '" + "Java" + "'";
+        List<JobPost> skillList = getSession().createQuery(sql).list();
+        return skillList;
+
+	}
+    
+
 	
 }
