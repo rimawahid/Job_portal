@@ -10355,7 +10355,7 @@ opacity
 }
 
 .sidebar-dark .nav-item .nav-link {
-	color: rgba(255, 255, 255, .8)
+	color: #fff;
 }
 
 .sidebar-dark .nav-item .nav-link i {

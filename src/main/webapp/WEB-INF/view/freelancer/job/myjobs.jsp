@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@include file="/WEB-INF/view/clients/common/clientHeader.jsp"%>
+<%@include file="/WEB-INF/view/freelancer/common/freelancerHeader.jsp"%>
 
 <div class="container mt-4">
 	<h1 class="text-center">All Jobs</h1>
@@ -15,7 +15,7 @@
 <!-- 				<th>Proposal Date</th> -->
 				<th>deliveryTime</th>
 <!-- 				<th>Status</th> -->
-				<th colspan="2">Action</th>
+				<th>Action</th>
 				
 			</tr>
 		</thead>
@@ -29,13 +29,14 @@
 <%-- 					<td>${approved.proposalDate}</td> --%>
 					<td>${approved.deliveryTime}</td>
 					<td>${approved.status}</td>
+					
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
 </div>
 
-<%@include file="/WEB-INF/view/clients/common/clientFooter.jsp"%>
+<%@include file="/WEB-INF/view/freelancer/common/freelancerFooter.jsp"%>
 <script>
 $('#tblShow').DataTable({
 	"paging" : true,

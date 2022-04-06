@@ -1,20 +1,52 @@
 @charset "ISO-8859-1";
 
-.bg{
+.bg {
 	background: #F1F2F4;
 }
-.profile-bg{
-	background:#fff;
+
+.profile-bg {
+	background: #fff;
 }
-.btn-width{
-	padding:7px 20px;
+
+.btn-width {
+	padding: 7px 20px;
 }
-.no_display{
-	display:none;
+
+.no_display {
+	display: none;
 }
+
 .btn-save {
-    background-color: #14A800;
-    margin-left: 477px;
-    color: #fff;
-    padding: 7px 30px;
+	background-color: #14A800;
+	margin-left: 477px;
+	color: #fff;
+	padding: 7px 30px;
 }
+
+.topbar-freelancer {
+	background: #EEEEEE;
+	height: 3.500rem;
+}
+.bg-gradient-freelancer{
+	background:#0077B5;
+}
+.icon-size {
+    font-size: 25px;
+    background: #BBBBBB;
+    padding: 16px;
+}
+.badge-danger-freelancer {
+    color: #fff;
+    background-color: #0077B5;
+    margin-left: -35px;
+    border: 1px solid #0077B5;
+    border-radius: 50%;
+}
+.profile_img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 25px 37px;
+}
+
+
