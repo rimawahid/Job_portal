@@ -9,6 +9,7 @@ import javax.persistence.Table;
 
 @Entity(name = "user")
 @Table(name = "user")
+
 public class User {
 	
 	@Id
@@ -22,7 +23,10 @@ public class User {
 	@Column(name = "lastName")
 	private String lastName;
 	
-	@Column(name = "email")
+	@Column(name = "userName", unique = true)
+	private String userName;
+	
+	@Column(name = "email", unique = true)
 	private String email;
 
 	@Column(name = "password")

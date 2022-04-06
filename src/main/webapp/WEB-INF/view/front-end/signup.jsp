@@ -15,6 +15,10 @@
 							placeholder="Last name">
 					</div>
 				</div>
+				<div class="form-group  mt-1">
+					<input type="email" class="form-control" id="userName" name="userName"
+						placeholder="userName">
+				</div>
 				<div class="form-group  mt-3">
 					<input type="email" class="form-control" id="email" name="email"
 						placeholder="Email">
