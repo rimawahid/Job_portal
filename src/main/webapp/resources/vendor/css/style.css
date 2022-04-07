@@ -1,5 +1,3 @@
-
-
 .nav-mr {
 	margin-left: 100px;
 }
@@ -201,41 +199,44 @@ a:hover {
 	background: #14A800;
 	color: #fff;
 	border-radius: 10px;
-	padding:10px  20px;
+	padding: 10px 20px;
 	margin: 0px 20px 0px 10px;
 	width: 330px;
 }
-.client-card:hover{
-	background:#fff;
-	color:#14a800;
+
+.client-card:hover {
+	background: #fff;
+	color: #14a800;
 }
 
 .client-banner {
 	background-image: url("/resources/images/client-banner.jpg");
 	background-position: center;
 	border-radius: 10px;
-
 }
 
 .client-heading {
 	font-size: 72px;
- 	color: #fff; 
+	color: #fff;
 	line-height: 72px;
 	font-weight: 400;
 	margin-top: 70px;
 	margin-left: 15px;
 }
+
 .Cheading {
-    font-size: 29px;
-    line-height: 36px;
-    font-weight: 500;
-    margin-bottom: 15px;
+	font-size: 29px;
+	line-height: 36px;
+	font-weight: 500;
+	margin-bottom: 15px;
 }
-.Ctext{
+
+.Ctext {
 	font-size: 18px;
 	line-height: 22px;
 	font-weight: 500;
 }
+
 .client-text {
 	color: #fff;
 	font-size: 18px;
@@ -245,38 +246,95 @@ a:hover {
 	margin-left: 15px;
 	margin-bottom: 25px;
 }
-footer{
-	background:#001E00;
-	color:#fff;
+
+footer {
+	background: #001E00;
+	color: #fff;
 }
-.f-text{
-	color:#fff;	
+
+.f-text {
+	color: #fff;
 }
-.f-link{
-	color:#fff;
-	margin-top:-5px;
+
+.f-link {
+	color: #fff;
+	margin-top: -5px;
 }
-.f-text:hover{
-	color:#fff;
-	
+
+.f-text:hover {
+	color: #fff;
 }
-.social-link{
-	margin-left:30px;
-	margin-top:-5px;
+
+.social-link {
+	margin-left: 30px;
+	margin-top: -5px;
 }
-.social-icon{
+
+.social-icon {
 	margin: 0px 2px;
 	padding: 7px;
-	border:1px solid #fff;
-	border-radius:50%
+	border: 1px solid #fff;
+	border-radius: 50%
 }
-.h-line{
-	border-bottom:1px solid #fff;
+
+.h-line {
+	border-bottom: 1px solid #fff;
 }
-.f-sign{
-	padding-right:20px;
-	border-right:1px solid #fff;
+
+.f-sign {
+	padding-right: 20px;
+	border-right: 1px solid #fff;
 }
-.mtop{
-	    margin-top: -9px;
+
+.mtop {
+	margin-top: -9px;
 }
+
+/* findwork start here */
+.findwork-heading {
+	font-size: 46px;
+	color: #14a800;
+}
+
+.findwork-icon {
+	color: #fff;
+	font-size: 9px;
+	border-radius: 50%;
+	background: #14a800;
+	padding: 3px 4px;
+	margin-right: 8px;
+}
+
+.findwork-text {
+	color: #001e00;
+	font-size: 15px;
+}
+
+.search-input {
+	width: 90%;
+	border-top: 1px solid #14a800;
+	border-bottom: 1px solid #14a800;
+	border-left: 1px solid #14a800;
+	border-right: none;
+	border-radius: 20px 0px 0px 20px;
+	height: 40px;
+	padding-left: 20px;
+}
+
+.search-icon {
+	border: 1px solid #ced4da;
+	background: #fff;
+	border-top: 1px solid #14a800;
+	border-bottom: 1px solid #14a800;
+	border-left: none;
+	border-right: 1px solid #14a800;
+	border-radius: 0px 20px 20px 0px;
+	padding-right: 10px;
+}
+.icon{
+	background:#14a800;
+	padding: 7px;
+	color:#fff;
+	border-radius: 50%;
+}
+/* findwork end here */
