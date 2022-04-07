@@ -23,7 +23,7 @@ public class FindWorkController {
 	@Autowired
 	JobPostService jobPostService;
 	
-	@RequestMapping(value = "/findwork", method = RequestMethod.POST)
+	@RequestMapping(value = "/findwork", method = RequestMethod.GET)
 	public ModelAndView findWork() {
 		return new ModelAndView("freelancer/findWork/findwork");
 	}
@@ -43,13 +43,9 @@ public class FindWorkController {
 //	}
 	
 	
-	@RequestMapping(value = "/proposals", method = RequestMethod.POST)
+	@RequestMapping(value = "/proposals", method = RequestMethod.GET)
 	public ModelAndView proposals() {
 		return new ModelAndView("freelancer/findWork/proposals");
 	}
-	
-	@RequestMapping(value = "/savedjob", method = RequestMethod.GET)
-	public ModelAndView savedJobs() {
-		return new ModelAndView("freelancer/findWork/savedJob");
-	}
+
 }

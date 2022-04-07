@@ -4,7 +4,7 @@
 
 <div class="container mt-5">
 	<div class="mb-5">
-		<form action="/freelancer/findwork" method="post">
+		<form action="/freelancer/save" method="post">
 			<div class="input-group mb-2">
 				<input type="text" class="form-control"
 					id="skill" name="skill" placeholder="Search By Skill">

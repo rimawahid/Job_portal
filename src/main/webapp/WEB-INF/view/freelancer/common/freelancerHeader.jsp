@@ -64,7 +64,7 @@
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item" href="/freelancer/findwork">Find Work</a> <a
-							class="collapse-item" href="/freelancer/savedjob">Saved Jobs</a> <a
+							class="collapse-item" href="/freelancer/getsavedjob">Saved Jobs</a> <a
 							class="collapse-item" href="/freelancer/proposals">Proposals </a>
 					</div>
 				</div></li>
