@@ -65,7 +65,7 @@ public class JobPostDAO {
         return jobpostList;
         }
     
-    public JobPost getProductById(int pid) {
+    public JobPost getById(int pid) {
         String sql = "from jobpost where id = '" + pid + "'"  ;
         List<JobPost> catList = getSession().createQuery(sql).list();  
         return catList.get(0);
@@ -91,7 +91,7 @@ public class JobPostDAO {
     
 //    search by skills
     public List<JobPost> searchBySkills(String skill) {
-		String sql = "from jobpost where skill = '" + "Java" + "'";
+		String sql = "from jobpost where skill = '" + skill+ "'";
         List<JobPost> skillList = getSession().createQuery(sql).list();
         return skillList;
 

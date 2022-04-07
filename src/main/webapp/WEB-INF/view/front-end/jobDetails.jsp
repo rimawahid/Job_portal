@@ -1,6 +1,8 @@
 <%@include file="/WEB-INF/view/front-end/common/header.jsp"%>
 <div class="container mt-5">
+<form action="/freelancer/savedjob" method="post">
 	<div class="row border mb-5">
+	
 		<div class="col-md-9">
 		
 			<div class="job-wrap border-right p-3">
@@ -79,6 +81,7 @@
 		</div>
 		<div class="col-md-3">
 			<div class="mt-5 pb-2">
+			<input type="hidden" class="form-control"value="${jobPost.id}" id="id" name="id">
 				<a type="submit" href="/jobapply/${jobPost.id}"
 					class="btn btn-success rounded-pill btn-width mt-3 mb-4">Submit
 					a Proposal</a>
@@ -110,6 +113,10 @@
 			
 			<hr>
 		</div>
+		
+		
+		
+		</form>
 	</div>
 </div>
 

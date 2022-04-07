@@ -30,15 +30,15 @@ public class JobPostService {
 		return jobPostDAO.getByStatus();
 	}
 	
-	public JobPost getProductById(int pid) {
-        return jobPostDAO.getProductById(pid);
+	public JobPost getById(int pid) {
+        return jobPostDAO.getById(pid);
     }
 	public JobPost update (JobPost j) {
 		return jobPostDAO.update(j);
 	}
 
 	 public JobPost delete(int pid) {
-		 JobPost jobPost = jobPostDAO.getProductById(pid);
+		 JobPost jobPost = jobPostDAO.getById(pid);
 	        return jobPostDAO.delete(jobPost);
 	    }
 	 

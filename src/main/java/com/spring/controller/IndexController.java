@@ -33,7 +33,7 @@ public class IndexController {
 	@RequestMapping(value = "/jobapply/{id}", method = RequestMethod.GET)
 	public ModelAndView jobapply(@PathVariable String id){
         int pid = Integer.valueOf(id);
-        JobPost jobPost = jobPostService.getProductById(pid);
+        JobPost jobPost = jobPostService.getById(pid);
         return new ModelAndView("front-end/proposals", "jobPost", jobPost);
     }
 

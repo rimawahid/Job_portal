@@ -71,7 +71,7 @@ public class JobPostController {
 	@RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
 	public ModelAndView edit(@PathVariable String id) {
 		int pid = Integer.valueOf(id);
-		JobPost j = jobPostService.getProductById(pid);
+		JobPost j = jobPostService.getById(pid);
 		return new ModelAndView("clients/job/updatejobs", "j", j);
 	}
 
