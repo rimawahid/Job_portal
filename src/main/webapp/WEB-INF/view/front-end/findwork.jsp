@@ -20,12 +20,12 @@
 			<div class="col-md-3">
 			<h4 class="mt-4 mb-4">Type of Work</h4>
 				<div class="form-check pb-3 findwork-text">
-					<input class="form-check-input" type="radio" name="findjob" id="anyType"checked> 
+					<input class="form-check-input" type="radio" value="Any type of work" name="findjob" id="anyType" checked> 
 					<label class="form-check-label" for="anyType">Any type of work</label>
 				</div>
 				<c:forEach items="${categories}" var="category">
 				<div class="form-check pb-3 findwork-text">
-					<input class="form-check-input" type="radio" name="findjob" id="${category.name}">
+					<input class="form-check-input" type="radio" onclick="test()" value="${category.name}" name="findjob" id="${category.name}">
 					<label class="form-check-label" for="${category.name}">${category.name}</label>
 				</div>
 				</c:forEach>
@@ -41,6 +41,8 @@
 					</button>
 				</div>
 <!-- 				</form> -->
+
+
 <!-- 				<div> -->
 <%-- 					<c:forEach items="${jobPosts}" var="jobPost"> --%>
 <%-- 				<a class="jobs" href="/findwork/details/${jobPost.id}"> --%>
@@ -81,22 +83,34 @@
 </div>
 <%@include file="/WEB-INF/view/front-end/common/footer.jsp"%>
 <script>
-$("#mybtn").on("click", function(e){
-	$.get("/allJobs", function(data, status){
-		console.log(data);
-		for (i = 0; i < data.length; i++){
-			console.log(data[i].title);
-		}
-	})
-})
 
-// $("#mybtn").on("click", function(e) {
-// 	      $.ajax({
-// 		 type: "GET",
-// 		 url: "/allJobs",
-// 		 success: function(data, status){
-// 		 console.log("Data: " + data + "\nStatus: " + status);
-// 		 console.log(data.length);
-// 		 }
-// 		 }); } )
+// var radioValue = $("input[name='findjob']:checked").val();
+// console.log(radioValue);
+ 
+$(document).ready(function() {
+	test();
+});
+
+function test(){
+	var radioValue = $("input[name='findjob']:checked").val();
+	console.log(radioValue);
+}
+
+
+$("#mybtn").on("click", function(e) {
+	      $.ajax({
+		 type: "GET",
+		 url: "/allJobs",
+		 success: function(data, status){
+		 console.log("Data: " + data + "\nStatus: " + status);
+		 console.log(data.length);
+		 for (i = 0; i < data.length; i++) {
+				$(".title").text(data[i].title);
+				//$("#flight_code").text(data[i].flight_code);
+				console.log(data[i].title);
+
+		 }
+		///console.log(data[4].title);
+		 }
+		 }); } )
 </script>

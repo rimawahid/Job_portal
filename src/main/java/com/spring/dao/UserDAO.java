@@ -59,7 +59,7 @@ public class UserDAO {
     }
 	
 	public User delete(User user) {
-    	String sql = "delete user where id = '"+user.getId()+"'";
+    	String sql = "delete user where id = '"+user.getUserId()+"'";
         int delete = getSession().createQuery(sql).executeUpdate();
         return user;
     }

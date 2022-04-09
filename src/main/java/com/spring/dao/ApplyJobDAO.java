@@ -11,9 +11,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.model.ApplyJob;
-import com.spring.model.Category;
-import com.spring.model.JobPost;
-import com.spring.model.User;
+
 
 @Repository(value = "applyJobDAO")
 @Transactional

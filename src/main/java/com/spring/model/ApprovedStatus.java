@@ -7,9 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity(name = "applicationstatus")
-@Table(name = "applicationstatus")
-public class ApplicationStatus {
+@Entity(name = "approvedStatus")
+@Table(name = "approvedStatus")
+public class ApprovedStatus {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")

@@ -27,22 +27,26 @@
 </form>
 
 <div class="container mt-4">
-	<table id="tblShow" class="table table-striped table-hover text-center">
-		<thead>
-			<tr>
-				<th>Job Code</th>
-				<th>Freelancer</th>
-				<th>Bid-Amount</th>
-				<th>budget</th>
-				<th>Proposal Date</th>
-				<th>deliveryTime</th>
-				<th>Approved Action</th>
-				<th>Rejected Action</th>
-			</tr>
-		</thead>
-		<tbody>
-		</tbody>
-	</table>
+	<form action="/freelancer/savedjob" method="post">
+<%-- 	<input type="hidden" class="form-control"value="${jobPost.id}" id="id" name="id"> --%>
+		<table id="tblShow"
+			class="table table-striped table-hover text-center">
+			<thead>
+				<tr>
+					<th>Job Code</th>
+					<th>Freelancer</th>
+					<th>Bid-Amount</th>
+					<th>budget</th>
+					<th>Proposal Date</th>
+					<th>deliveryTime</th>
+					<th>Approved Action</th>
+					<th>Rejected Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</form>
 </div>
 
 <%@include file="/WEB-INF/view/clients/common/clientFooter.jsp"%>
@@ -81,7 +85,7 @@
 								html += "<td>" + data[i].proposalDate + "</td>";
 								html += "<td>" + data[i].deliveryTime + "</td>";
 								html += "<td><button class='btn btn-success'><a class='text-white' href='/client/applications/approved/"+data[i].id+"' >Approved</a></button></td>";
-								html += "<td><button class='btn btn-danger'><a class='text-white' href='/client/applications/"+data[i].id+"'>Rejected</a></button></td>";
+								html += "<td><button type='submit' class='btn btn-danger'><a class='text-white' href='/client/applications/"+data[i].id+"'>Rejected</a></button></td>";
 								html += "</tr>";
 							}
 							$("#tblShow tbody").html(html);

@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.model.Category;
 import com.spring.model.JobPost;
+import com.spring.model.SavedJobs;
 import com.spring.service.CategoryService;
 import com.spring.service.JobPostService;
 
@@ -33,9 +34,11 @@ public class FindWordController {
 	
 	/* for all type job findwork page */
 	@RequestMapping(value = "/allJobs", method = RequestMethod.GET)
-	public ModelAndView allTypeJobs() {
+	public List<JobPost> allTypeJobs() {
 		List<JobPost> jobPosts = jobPostService.getAll();
-		return new ModelAndView("front-end/findwork", "jobPosts", jobPosts);
+		System.out.println(jobPosts + "................");
+		return jobPosts;
+		// return new ModelAndView("front-end/findwork", "jobPosts", jobPosts);
 	}
 
 	@RequestMapping(value = "findwork/details/{id}", method = RequestMethod.GET)
