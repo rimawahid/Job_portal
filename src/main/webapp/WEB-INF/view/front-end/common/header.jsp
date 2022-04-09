@@ -24,7 +24,7 @@
 				<ul class="navbar-nav mr-auto nav-mr">
 					<li class="nav-item nav-hover"><a class="nav-link " href="#">Find
 							Talent </a></li>
-					<li class="nav-item"><a class="nav-link" href="/findWork">Find
+					<li class="nav-item"><a class="nav-link" href="/freelancer-jobs">Find
 							Work</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Why
 							Rimazing</a></li>
