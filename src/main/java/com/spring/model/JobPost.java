@@ -21,6 +21,9 @@ public class JobPost {
 
 	@Column(name = "category")
 	private String category;
+	
+	@Column(name = "category_code")
+	private String category_code;
 
 	@Column(name = "code")
 	private String code;
@@ -158,5 +161,15 @@ public class JobPost {
 	public void setBudgetType(String budgetType) {
 		this.budgetType = budgetType;
 	}
+
+	public String getCategory_code() {
+		return category_code;
+	}
+
+	public void setCategory_code(String category_code) {
+		this.category_code = category_code;
+	}
+	
+	
 
 }

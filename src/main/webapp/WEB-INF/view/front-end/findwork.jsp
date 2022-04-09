@@ -25,7 +25,7 @@
 				</div>
 				<c:forEach items="${categories}" var="category">
 				<div class="form-check pb-3 findwork-text">
-					<input class="form-check-input" type="radio" onclick="test()" value="${category.name}" name="findjob" id="${category.name}">
+					<input class="form-check-input" type="radio" value="${category.code}" name="findjob" id="${category.code}" class="testc">
 					<label class="form-check-label" for="${category.name}">${category.name}</label>
 				</div>
 				</c:forEach>
@@ -36,48 +36,22 @@
 <!-- 				<form> -->
 				<div class="input-group mb-5">
 					<input type="text" class="search-input" id="skill" name="skill" placeholder="Try skills like &#8220;Java&#8221; or &#8220;Javascript&#8221;">
-					<button type="submit" id="mybtn" class="search-icon">
+					<button type="button" id="mybtn" class="search-icon">
 						<i class="fa-solid fa-magnifying-glass icon"></i>
 					</button>
 				</div>
 <!-- 				</form> -->
 
 
-<!-- 				<div> -->
-<%-- 					<c:forEach items="${jobPosts}" var="jobPost"> --%>
-<%-- 				<a class="jobs" href="/findwork/details/${jobPost.id}"> --%>
-<!-- 					<div class="job-wrap border p-3 job-post"> -->
-<%-- 						<p>${jobPost.title}</p> --%>
-<!-- 						<div class="d-flex justify-content-start"> -->
-<%-- 							<p class="job-text">${jobPost.budgetType}</p> --%>
-<%-- 							<p class="job-text">Budget:${jobPost.budget}</p> --%>
-<%-- 							<p class="job-text">Posted: ${jobPost.posted_time}</p> --%>
-<!-- 						</div> -->
-<%-- 						<p>${jobPost.description}</p> --%>
-<!-- 						<div class="d-flex justify-content-start"> -->
-<!-- 							<p class="skill border rounded-pill">Java</p> -->
-<!-- 							<p class="skill border rounded-pill">JavaScript</p> -->
-<!-- 							<p class="skill border rounded-pill">PHP</p> -->
-<!-- 						</div> -->
-<!-- 						<p class="job-text">Proposals:</p> -->
-<!-- 						<div class="d-flex justify-content-start"> -->
-<!-- 							<p class="pr-3"> -->
-<!-- 								<i class="fa-solid fa-square-check tick-color"></i> <span -->
-<!-- 									class="job-text">Payment verified </span> <i -->
-<!-- 									class="fa-solid fa-star star-color"></i> <i -->
-<!-- 									class="fa-solid fa-star star-color"></i> <i -->
-<!-- 									class="fa-solid fa-star star-color"></i> <i -->
-<!-- 									class="fa-solid fa-star star-color"></i> -->
-<!-- 							</p> -->
-<!-- 							<p class="job-text"> -->
-<!-- 								<i class="fa-solid fa-location-dot pr-1"></i>Bangladesh -->
-<!-- 							</p> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 						</a> -->
-<%-- 				</c:forEach> --%>
-<!-- 				</div> -->
+				<div id="job_div">
+					
+				
+			
+				</div>
 			</div>
+			
+			
+			
 		</div>
 	</div>
 </div>
@@ -87,30 +61,82 @@
 // var radioValue = $("input[name='findjob']:checked").val();
 // console.log(radioValue);
  
-$(document).ready(function() {
-	test();
-});
+var search_val = "";
+var url_val = "";
+
 
 function test(){
-	var radioValue = $("input[name='findjob']:checked").val();
-	console.log(radioValue);
+
+    var html = "";
+    $("#job_div").html(html);
+     $.ajax({
+	 type: "POST",
+	 data: {job_cat : search_val},
+	 url: url_val,
+	 success: function(data, status){
+	 console.log("Data: " + data + "\nStatus: " + status);
+	 console.log(data.length);
+	 for (i = 0; i < data.length; i++) {
+			$(".title").text(data[i].title);
+			
+			console.log(data[i].title);
+			html += '<a class="jobs" href="/findwork/details/'+data[i].id+'">'
+				html += '<div class="job-wrap border p-3 job-post">'
+					html += '<p>'+data[i].title+'</p>'
+						html += '<div class="d-flex justify-content-start">'
+							html += '<p class="job-text">'+data[i].budgetType+'</p>'
+								html += '<p class="job-text">Budget:'+data[i].budget+'</p>'
+									html += '<p class="job-text">Posted: ${data[i].posted_time}</p>'
+										html += '</div>'
+											html += '<p>'+data[i].description+'</p>'
+												html += '<div class="d-flex justify-content-start">'
+													html += '<p class="skill border rounded-pill">Java</p>'
+														html += '<p class="skill border rounded-pill">JavaScript</p>'
+															html += '<p class="skill border rounded-pill">PHP</p>'
+																html += '</div>'
+																	html += '<p class="job-text">Proposals:</p>'
+																		html += '<div class="d-flex justify-content-start">'
+																			html += '<p class="pr-3">'
+																				html += '<i class="fa-solid fa-square-check tick-color"></i>' 
+																					html += '<span class="job-text">Payment verified </span>' 
+																						html += '<i class="fa-solid fa-star star-color"></i>'
+																							html += '<i class="fa-solid fa-star star-color"></i>' 
+																								html += '<i class="fa-solid fa-star star-color"></i>' 
+																									html += '<i class="fa-solid fa-star star-color"></i>'
+																										html += '</p>'
+																											html += '<p class="job-text">'
+																												html += '<i class="fa-solid fa-location-dot pr-1"></i>Bangladesh'
+																													html += '</p>'
+																														html += '</div>'
+																															html += '</div>'
+																																html += '</a>';
+			
+
+	 }
+	///console.log(data[4].title);
+	 $("#job_div").html(html);
+	 }
+     
+    
+	 }); 
 }
 
 
-$("#mybtn").on("click", function(e) {
-	      $.ajax({
-		 type: "GET",
-		 url: "/allJobs",
-		 success: function(data, status){
-		 console.log("Data: " + data + "\nStatus: " + status);
-		 console.log(data.length);
-		 for (i = 0; i < data.length; i++) {
-				$(".title").text(data[i].title);
-				//$("#flight_code").text(data[i].flight_code);
-				console.log(data[i].title);
+$("#mybtn").on("click", function() {
+	search_val = $("#skill").val();
+	console.log(search_val)
+	url_val = "/jobsbySkill";
+	test();      
+})
 
-		 }
-		///console.log(data[4].title);
-		 }
-		 }); } )
+$("input[name='findjob']").on("click", function() {
+	$("#skill").val("")
+	var radioValue = $("input[name='findjob']:checked").val();
+	console.log(radioValue);
+	search_val = radioValue;
+	url_val = "/jobsbyCat";console.log(search_val)
+	test();      
+})
+
+	
 </script>

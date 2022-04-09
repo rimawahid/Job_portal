@@ -2,6 +2,8 @@ package com.spring.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,6 +48,24 @@ public class FindWordController {
 		int pid = Integer.valueOf(id);
 		JobPost jobPost = jobPostService.getById(pid);
 		return new ModelAndView("front-end/jobDetails", "jobPost", jobPost);
+	}
+	
+	@RequestMapping(value = "/jobsbyCat", method = RequestMethod.POST)
+	public List<JobPost> jobsByCat(HttpServletRequest request) {
+		System.out.println(request.getParameter("job_cat"));
+		List<JobPost> jobPosts = jobPostService.getByCat(request.getParameter("job_cat"));
+		System.out.println(jobPosts + "................");
+		return jobPosts;
+		// return new ModelAndView("front-end/findwork", "jobPosts", jobPosts);
+	}
+	
+	@RequestMapping(value = "/jobsbySkill", method = RequestMethod.POST)
+	public List<JobPost> jobsBySkill(HttpServletRequest request) {
+		System.out.println(request.getParameter("job_cat"));
+		List<JobPost> jobPosts = jobPostService.getBySkill(request.getParameter("job_cat"));
+		System.out.println(jobPosts + "................");
+		return jobPosts;
+		// return new ModelAndView("front-end/findwork", "jobPosts", jobPosts);
 	}
 
 }

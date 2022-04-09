@@ -57,7 +57,7 @@ public class JobApplicationController {
 		
 		ApplyJob p = applyJobService.approvedStatus(applyjob);
 		
-		//ApprovedStatus b = approvedStatusService.save(approvedStatus, request);
+	//	ApprovedStatus b = approvedStatusService.save(null, request);
 		return approvedApplications();
 //		List<ApplyJob> applyJob = applyJobService.findByApproved(null);
 //		return new ModelAndView("clients/applications/approvedApplications", "applyJob", applyJob);

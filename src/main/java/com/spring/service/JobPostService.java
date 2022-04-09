@@ -57,6 +57,16 @@ public class JobPostService {
 	public List<JobPost> searchBySkills(String skill) {
 		return  jobPostDAO.searchBySkills(skill);
 	}
+
+	public List<JobPost> getByCat(String parameter) {
+		// TODO Auto-generated method stub
+	  return jobPostDAO.getByCat(parameter);
+	}
+
+	public List<JobPost> getBySkill(String parameter) {
+		// TODO Auto-generated method stub
+		return jobPostDAO.getBySkill(parameter);
+	}
 	
 	
 	 

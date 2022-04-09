@@ -14,11 +14,12 @@
 				<div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Category:</label>
 					<div class="col-sm-9">
-						<select id="inputState" class="form-control" name="category">
+						<select id="category_code" class="form-control" name="category_code">
 							<c:forEach items="${categories}" var="category">
-								<option value="${category.name}">${category.name}</option>
+								<option value="${category.code}">${category.name}</option>
 							</c:forEach>
 						</select>
+						<input type="hidden" name="category" id="category"/>
 					</div>
 				</div>
 				<div class="form-group row">
@@ -118,4 +119,9 @@
 	$("#postedTime").click(function() {
 		$("#postedTime").val(today);
 	});
-</script>
+	
+	$("#category").val($("#category_code :selected").text());
+	$("#category_code").on("change", function(){
+		$("#category").val($("#category_code :selected").text());
+	})
+	</script>
