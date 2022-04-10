@@ -85,7 +85,7 @@
 								html += "<td>" + data[i].proposalDate + "</td>";
 								html += "<td>" + data[i].deliveryTime + "</td>";
 								html += "<td><button class='btn btn-success'><a class='text-white' href='/client/applications/approved/"+data[i].id+"' >Approved</a></button></td>";
-								html += "<td><button type='submit' class='btn btn-danger'><a class='text-white' href='/client/applications/"+data[i].id+"'>Rejected</a></button></td>";
+								html += "<td><button class='btn btn-danger'><a class='text-white' href='/client/applications/rejected/"+data[i].id+"'>Rejected</a></button></td>";
 								html += "</tr>";
 							}
 							$("#tblShow tbody").html(html);

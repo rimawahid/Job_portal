@@ -55,8 +55,22 @@ public class ApplyJobDAO {
 		return (ApplyJob) applyJob;
 	}
 	
+	public ApplyJob rejectedStatus(ApplyJob applyJob) {
+		String hql = "update applyjob set status ='rejected' where id = '" + applyJob.getId() + "'";
+		Query q = getSession().createQuery(hql);
+		q.executeUpdate();
+		getSession().flush();
+		return (ApplyJob) applyJob;
+	}
+	
 	public List<ApplyJob> findByApproved(String status) {
 		String sql = "from applyjob where status = '" + "approved" + "'";
+        List<ApplyJob> approvedList = getSession().createQuery(sql).list();
+        return approvedList;
+
+	}
+	public List<ApplyJob> findByRejected(String status) {
+		String sql = "from applyjob where status = '" + "rejected" + "'";
         List<ApplyJob> approvedList = getSession().createQuery(sql).list();
         return approvedList;
 

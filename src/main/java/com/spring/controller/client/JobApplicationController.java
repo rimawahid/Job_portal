@@ -11,9 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 import com.spring.model.ApplyJob;
 import com.spring.model.ApprovedStatus;
 import com.spring.model.JobPost;
+import com.spring.model.RejectedStatus;
 import com.spring.service.ApplyJobService;
 import com.spring.service.ApprovedStatusService;
 import com.spring.service.JobPostService;
+import com.spring.service.RejectedStatusService;
 
 @RestController
 @RequestMapping(value = "client/applications")
@@ -27,6 +29,9 @@ public class JobApplicationController {
 	
 	@Autowired
 	ApprovedStatusService approvedStatusService;
+	
+	@Autowired
+	RejectedStatusService rejectedStatusService;
 	
 	@RequestMapping(value = "/jobapplications", method = RequestMethod.GET)
 	public ModelAndView jobApplications() {
@@ -46,9 +51,18 @@ public class JobApplicationController {
 	public ModelAndView update(HttpServletRequest request , @PathVariable("id") String id) {	
 		ApplyJob applyjob = applyJobService.getById(Integer.valueOf(id));
 		ApplyJob p = applyJobService.approvedStatus(applyjob);
-		
 		ApprovedStatus b = approvedStatusService.save(p);
 		return approvedApplications();
+	}
+	
+	
+	@RequestMapping(value = "/rejected/{id}", method = RequestMethod.GET)
+	//public ModelAndView update(HttpServletRequest request , @ModelAttribute ApprovedStatus approvedStatus, @PathVariable("id") int id) {
+	public ModelAndView updateRejectedStatus(HttpServletRequest request , @PathVariable("id") String id) {	
+		ApplyJob applyjob = applyJobService.getById(Integer.valueOf(id));
+		ApplyJob p = applyJobService.rejectedStatus(applyjob);
+		RejectedStatus b = rejectedStatusService.save(p);
+		return rejectedApplications();
 	}
 	
 	
@@ -57,6 +71,13 @@ public class JobApplicationController {
 		List<ApplyJob> applyJob = applyJobService.findByApproved(null);
 		System.out.println(applyJob);
 		return new ModelAndView("clients/applications/approvedApplications", "applyJob", applyJob);
+	}
+	
+	@RequestMapping(value = "/rejectedapplications", method = RequestMethod.GET)
+	public ModelAndView rejectedApplications() {
+		List<ApplyJob> applyJob = applyJobService.findByRejected(null);
+		System.out.println(applyJob);
+		return new ModelAndView("clients/applications/rejectedApplication", "applyJob", applyJob);
 	}
 	
 //	/* For All Clients */
@@ -73,10 +94,10 @@ public class JobApplicationController {
 	
 	
 	
-	@RequestMapping(value = "/rejectedapplications", method = RequestMethod.GET)
-	public ModelAndView rejectedApplications() {
-		return new ModelAndView("clients/applications/rejectedApplication");
-	}
+//	@RequestMapping(value = "/rejectedapplications", method = RequestMethod.GET)
+//	public ModelAndView rejectedApplications() {
+//		return new ModelAndView("clients/applications/rejectedApplication");
+//	}
 	
 	
 	

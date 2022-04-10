@@ -3,7 +3,7 @@
 <%@include file="/WEB-INF/view/clients/common/clientHeader.jsp"%>
 
 <div class="container mt-4">
-	<h1 class="text-center">Approved List</h1>
+	<h1 class="text-center">Rejected List</h1>
 	<table id="tblShow"
 		class="table table-striped table-hover text-center">
 		<thead>
@@ -14,17 +14,19 @@
 				<th>budget</th>
 				<th>Proposal Date</th>
 				<th>deliveryTime</th>
+				<th>Status</th>
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach items="${applyJob}" var="approved">
+			<c:forEach items="${applyJob}" var="rejected">
 				<tr>
-					<td>${approved.freelancer}</td>
-					<td>${approved.title}</td>
-					<td>${approved.bidAmount}</td>
-					<td>${approved.budget}</td>
-					<td>${approved.proposalDate}</td>
-					<td>${approved.deliveryTime}</td>
+					<td>${rejected.freelancer}</td>
+					<td>${rejected.title}</td>
+					<td>${rejected.bidAmount}</td>
+					<td>${rejected.budget}</td>
+					<td>${rejected.proposalDate}</td>
+					<td>${rejected.deliveryTime}</td>
+					<td>${rejected.status}</td>
 				</tr>
 			</c:forEach>
 		</tbody>

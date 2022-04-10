@@ -2,22 +2,21 @@ package com.spring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.spring.dao.ApprovedStatusDAO;
+
+import com.spring.dao.RejectedStatusDAO;
 import com.spring.model.ApplyJob;
-import com.spring.model.ApprovedStatus;
-
-
-@Service(value = "approvedStatusService")
-public class ApprovedStatusService {
+import com.spring.model.RejectedStatus;
+@Service(value = "rejectedStatusService")
+public class RejectedStatusService {
 	@Autowired
-	ApprovedStatusDAO approvedStatusDAO;
+	RejectedStatusDAO rejectedStatusDAO;
 	
 	@Autowired
 	ApplyJobService applyJobService;
 	
-	public ApprovedStatus save(ApplyJob applyJob) {
+	public RejectedStatus save(ApplyJob applyJob) {
 		//System.out.println(request.getParameter("id"));
-		ApprovedStatus a = new ApprovedStatus();
+		RejectedStatus a = new RejectedStatus();
 		a.setTitle(applyJob.getTitle());
 		a.setBudget(applyJob.getBudget());
 		a.setBidAmount(applyJob.getBidAmount());
@@ -25,6 +24,6 @@ public class ApprovedStatusService {
 		a.setFreelancer(applyJob.getFreelancer());
 		a.setProposalDate(applyJob.getProposalDate());
 		a.setStatus(applyJob.getStatus());
-		return approvedStatusDAO.save(a);
+		return rejectedStatusDAO.save(a);
 	}
 }
