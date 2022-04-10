@@ -18,9 +18,9 @@ public class ApprovedStatusService {
 	@Autowired
 	ApplyJobService applyJobService;
 	
-	public ApprovedStatus save(ApprovedStatus a, HttpServletRequest request) {
-		System.out.println(request.getParameter("id"));
-		ApplyJob applyJob = applyJobService.getById(Integer.valueOf(request.getParameter("id")));
+	public ApprovedStatus save(ApplyJob applyJob) {
+		//System.out.println(request.getParameter("id"));
+		ApprovedStatus a = new ApprovedStatus();
 		a.setTitle(applyJob.getTitle());
 		a.setBudget(applyJob.getBudget());
 		a.setBidAmount(applyJob.getBidAmount());

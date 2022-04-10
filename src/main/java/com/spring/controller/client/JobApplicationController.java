@@ -1,23 +1,16 @@
 package com.spring.controller.client;
 
 import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.spring.model.ApplyJob;
 import com.spring.model.ApprovedStatus;
-import com.spring.model.Category;
 import com.spring.model.JobPost;
-import com.spring.model.SavedJobs;
-import com.spring.model.User;
 import com.spring.service.ApplyJobService;
 import com.spring.service.ApprovedStatusService;
 import com.spring.service.JobPostService;
@@ -49,19 +42,13 @@ public class JobApplicationController {
 	}
 	
 	@RequestMapping(value = "/approved/{id}", method = RequestMethod.GET)
-	public ModelAndView update(HttpServletRequest request , @ModelAttribute ApprovedStatus approvedStatus, @PathVariable("id") int id) {
-	//public ModelAndView update(HttpServletRequest request , @PathVariable("id") int id) {	
-		//System.out.println(id +"....................");
-		ApplyJob applyjob = applyJobService.getById(id);
-		System.out.println(applyjob.getId());
-		
+	//public ModelAndView update(HttpServletRequest request , @ModelAttribute ApprovedStatus approvedStatus, @PathVariable("id") int id) {
+	public ModelAndView update(HttpServletRequest request , @PathVariable("id") String id) {	
+		ApplyJob applyjob = applyJobService.getById(Integer.valueOf(id));
 		ApplyJob p = applyJobService.approvedStatus(applyjob);
 		
-		ApprovedStatus b = approvedStatusService.save(approvedStatus, request);
+		ApprovedStatus b = approvedStatusService.save(p);
 		return approvedApplications();
-//		List<ApplyJob> applyJob = applyJobService.findByApproved(null);
-//		return new ModelAndView("clients/applications/approvedApplications", "applyJob", applyJob);
-
 	}
 	
 	
