@@ -19,10 +19,10 @@
 		<div class="row">
 			<div class="col-md-3">
 			<h4 class="mt-4 mb-4">Type of Work</h4>
-				<div class="form-check pb-3 findwork-text">
-					<input class="form-check-input" type="radio" value="Any type of work" name="findjob" id="anyType" checked> 
-					<label class="form-check-label" for="anyType">Any type of work</label>
-				</div>
+<!-- 				<div class="form-check pb-3 findwork-text"> -->
+<!-- 					<input class="form-check-input" type="radio" value="Any type of work" name="findjob" id="anyType" checked>  -->
+<!-- 					<label class="form-check-label" for="anyType">Any type of work</label> -->
+<!-- 				</div> -->
 				<c:forEach items="${categories}" var="category">
 				<div class="form-check pb-3 findwork-text">
 					<input class="form-check-input" type="radio" value="${category.code}" name="findjob" id="${category.code}" class="testc">
@@ -86,7 +86,7 @@ function test(){
 						html += '<div class="d-flex justify-content-start">'
 							html += '<p class="job-text">'+data[i].budgetType+'</p>'
 								html += '<p class="job-text">Budget:'+data[i].budget+'</p>'
-									html += '<p class="job-text">Posted: ${data[i].posted_time}</p>'
+									html += '<p class="job-text">Posted: '+data[i].posted_time+'</p>'
 										html += '</div>'
 											html += '<p>'+data[i].description+'</p>'
 												html += '<div class="d-flex justify-content-start">'

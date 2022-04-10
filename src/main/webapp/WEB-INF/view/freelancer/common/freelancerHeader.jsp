@@ -140,7 +140,7 @@
 
 			<!-- Divider -->
 			<hr class="sidebar-divider my-0">
-<!-- 			<!-- Divider --> -->
+<!-- 			<!-- Divider --> 
 <!-- 			<hr class="sidebar-divider d-none d-md-block"> -->
 
 			<!-- Sidebar Toggler (Sidebar) -->

@@ -19,6 +19,7 @@ public class ApprovedStatusService {
 	ApplyJobService applyJobService;
 	
 	public ApprovedStatus save(ApprovedStatus a, HttpServletRequest request) {
+		System.out.println(request.getParameter("id"));
 		ApplyJob applyJob = applyJobService.getById(Integer.valueOf(request.getParameter("id")));
 		a.setTitle(applyJob.getTitle());
 		a.setBudget(applyJob.getBudget());

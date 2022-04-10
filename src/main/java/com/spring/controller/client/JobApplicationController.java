@@ -49,15 +49,15 @@ public class JobApplicationController {
 	}
 	
 	@RequestMapping(value = "/approved/{id}", method = RequestMethod.GET)
-	//public ModelAndView update(HttpServletRequest request , @ModelAttribute ApprovedStatus approvedStatus, @PathVariable("id") int id) {
-	public ModelAndView update(HttpServletRequest request , @PathVariable("id") int id) {	
+	public ModelAndView update(HttpServletRequest request , @ModelAttribute ApprovedStatus approvedStatus, @PathVariable("id") int id) {
+	//public ModelAndView update(HttpServletRequest request , @PathVariable("id") int id) {	
 		//System.out.println(id +"....................");
 		ApplyJob applyjob = applyJobService.getById(id);
 		System.out.println(applyjob.getId());
 		
 		ApplyJob p = applyJobService.approvedStatus(applyjob);
 		
-	//	ApprovedStatus b = approvedStatusService.save(null, request);
+		ApprovedStatus b = approvedStatusService.save(approvedStatus, request);
 		return approvedApplications();
 //		List<ApplyJob> applyJob = applyJobService.findByApproved(null);
 //		return new ModelAndView("clients/applications/approvedApplications", "applyJob", applyJob);

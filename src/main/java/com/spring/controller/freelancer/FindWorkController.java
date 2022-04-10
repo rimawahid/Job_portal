@@ -19,17 +19,22 @@ import com.spring.service.JobPostService;
 @RestController
 @RequestMapping(value = "freelancer")
 public class FindWorkController {
-	
+
 	@Autowired
 	JobPostService jobPostService;
-	
+
+	@Autowired
+	JobPostService jobpostService;
+
 	@RequestMapping(value = "/findwork", method = RequestMethod.GET)
-	public ModelAndView findWork() {
-		return new ModelAndView("freelancer/findWork/findwork");
+	public ModelAndView bestmatch() {
+		List<JobPost> jobpost = jobpostService.getAll();
+		// return new ModelAndView("admin/categories/showCategories", "categories",
+		// categories);
+		return new ModelAndView("freelancer/findWork/findwork", "jobpost", jobpost);
 	}
-	
-	
-	//search subcategory through category
+
+	// search subcategory through category
 //		@RequestMapping(value = "/findworks/{skill}", method = RequestMethod.POST)
 //		public List<JobPost> getValue(HttpServletRequest request, @PathVariable("skill") String skill) {
 //			return jobPostService.searchBySkills(skill);
@@ -41,8 +46,7 @@ public class FindWorkController {
 //		System.out.println(jobpost +".....");
 //		return new ModelAndView("freelancer/findWork/findwork", "jobpost", jobpost);
 //	}
-	
-	
+
 	@RequestMapping(value = "/proposals", method = RequestMethod.GET)
 	public ModelAndView proposals() {
 		return new ModelAndView("freelancer/findWork/proposals");
