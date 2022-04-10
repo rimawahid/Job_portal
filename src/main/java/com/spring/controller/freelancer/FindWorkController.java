@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.spring.model.ApplyJob;
 import com.spring.model.JobPost;
 import com.spring.model.User;
+import com.spring.service.ApplyJobService;
 import com.spring.service.JobPostService;
 
 @RestController
@@ -24,11 +25,11 @@ public class FindWorkController {
 	JobPostService jobPostService;
 
 	@Autowired
-	JobPostService jobpostService;
+	ApplyJobService applyJobService;
 
 	@RequestMapping(value = "/findwork", method = RequestMethod.GET)
 	public ModelAndView bestmatch() {
-		List<JobPost> jobpost = jobpostService.getAll();
+		List<JobPost> jobpost = jobPostService.getAll();
 		// return new ModelAndView("admin/categories/showCategories", "categories",
 		// categories);
 		return new ModelAndView("freelancer/findWork/findwork", "jobpost", jobpost);
@@ -47,9 +48,17 @@ public class FindWorkController {
 //		return new ModelAndView("freelancer/findWork/findwork", "jobpost", jobpost);
 //	}
 
+//	@RequestMapping(value = "/proposals", method = RequestMethod.GET)
+//	public ModelAndView proposals() {
+//		return new ModelAndView("freelancer/findWork/proposals");
+//	}
+	
 	@RequestMapping(value = "/proposals", method = RequestMethod.GET)
 	public ModelAndView proposals() {
-		return new ModelAndView("freelancer/findWork/proposals");
+		List<ApplyJob> applyJob = applyJobService.findByApproved(null);
+		System.out.println(applyJob);
+		return new ModelAndView("freelancer/findWork/proposals", "applyJob", applyJob);
 	}
-
 }
+
+
