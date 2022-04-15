@@ -16,10 +16,9 @@ public class ApplyJob {
 	@Column(name = "id")
 	private int id;
 
-	
 	@Column(name = "title")
 	private String title;
-	
+
 	@Column(name = "jcode")
 	private String jcode;
 
@@ -41,12 +40,22 @@ public class ApplyJob {
 	@Column(name = "description")
 	private String description;
 
+	@Column(name = "jobLength")
+	private String jobLength;
+	
+	public String getJobLength() {
+		return jobLength;
+	}
+
+	public void setJobLength(String jobLength) {
+		this.jobLength = jobLength;
+	}
+
 	@Column(name = "attachment")
 	private String attachment;
 
 	@Column(name = "status")
-	private String status="pending";
-
+	private String status = "pending";
 
 	public String getJcode() {
 		return jcode;

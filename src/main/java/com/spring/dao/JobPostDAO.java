@@ -88,13 +88,13 @@ public class JobPostDAO {
 		return (JobPost) jobPost;
 	}
     
-    public JobPost updateRejectStatus(JobPost jobPost) {
-		String hql = "update jobpost set status ='rejected' where title = '" + jobPost.getTitle() + "'";
-		Query q = getSession().createQuery(hql);
-		q.executeUpdate();
-		getSession().flush();
-		return (JobPost) jobPost;
-	}
+//    public JobPost updateRejectStatus(JobPost jobPost) {
+//		String hql = "update jobpost set status ='rejected' where title = '" + jobPost.getTitle() + "'";
+//		Query q = getSession().createQuery(hql);
+//		q.executeUpdate();
+//		getSession().flush();
+//		return (JobPost) jobPost;
+//	}
     
     
 //    search by skills

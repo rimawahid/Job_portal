@@ -11,7 +11,7 @@
 				<th>Freelancer</th>
 				<th>Job</th>
 				<th>Bid-Amount</th>
-<!-- 				<th>budget</th> -->
+				<th>Job Length</th>
 <!-- 				<th>Proposal Date</th> -->
 				<th>deliveryTime</th>
 <!-- 				<th>Status</th> -->
@@ -25,7 +25,7 @@
 					<td>${approved.freelancer}</td>
 					<td>${approved.title}</td>
 					<td>${approved.bidAmount}</td>
-<%-- 					<td>${approved.budget}</td> --%>
+					<td>${approved.jobLength}</td>
 <%-- 					<td>${approved.proposalDate}</td> --%>
 					<td>${approved.deliveryTime}</td>
 					<td>${approved.status}</td>

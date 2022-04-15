@@ -34,17 +34,17 @@ public class ApplyJobService {
 		jobPostService.updateStatus(jpost);
 		return applyJobDAO.approvedStatus(approved);
 	}
-	
+
 	public ApplyJob rejectedStatus(ApplyJob approved) {
-		JobPost jpost = jobPostService.getBYTitle(approved.getTitle());
-		jobPostService.updateRejectStatus(jpost);
+		// JobPost jpost = jobPostService.getBYTitle(approved.getTitle());
+//		jobPostService.updateRejectStatus(jpost);
 		return applyJobDAO.rejectedStatus(approved);
 	}
 
 	public List<ApplyJob> findByApproved(String status) {
 		return applyJobDAO.findByApproved(status);
 	}
-	
+
 	public List<ApplyJob> findByRejected(String status) {
 		return applyJobDAO.findByRejected(status);
 	}

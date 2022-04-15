@@ -54,9 +54,9 @@ public class JobPostService {
 			return jobPostDAO.updateStatus(jobPost);
 		}
 	
-	public JobPost updateRejectStatus(JobPost jobPost) {
-		return jobPostDAO.updateRejectStatus(jobPost);
-	}
+//	public JobPost updateRejectStatus(JobPost jobPost) {
+//		return jobPostDAO.updateRejectStatus(jobPost);
+//	}
 		
 	public List<JobPost> searchBySkills(String skill) {
 		return  jobPostDAO.searchBySkills(skill);

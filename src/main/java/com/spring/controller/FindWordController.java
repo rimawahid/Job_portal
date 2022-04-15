@@ -38,9 +38,7 @@ public class FindWordController {
 	@RequestMapping(value = "/allJobs", method = RequestMethod.GET)
 	public List<JobPost> allTypeJobs() {
 		List<JobPost> jobPosts = jobPostService.getAll();
-//		System.out.println(jobPosts + "................");
 		return jobPosts;
-		// return new ModelAndView("front-end/findwork", "jobPosts", jobPosts);
 	}
 
 	@RequestMapping(value = "findwork/details/{id}", method = RequestMethod.GET)
@@ -54,18 +52,14 @@ public class FindWordController {
 	public List<JobPost> jobsByCat(HttpServletRequest request) {
 		System.out.println(request.getParameter("job_cat"));
 		List<JobPost> jobPosts = jobPostService.getByCat(request.getParameter("job_cat"));
-//		System.out.println(jobPosts + "................");
 		return jobPosts;
-		// return new ModelAndView("front-end/findwork", "jobPosts", jobPosts);
 	}
 
 	@RequestMapping(value = "/jobsbySkill", method = RequestMethod.POST)
 	public List<JobPost> jobsBySkill(HttpServletRequest request) {
 		System.out.println(request.getParameter("job_cat"));
 		List<JobPost> jobPosts = jobPostService.getBySkill(request.getParameter("job_cat"));
-//		System.out.println(jobPosts + "................");
 		return jobPosts;
-		// return new ModelAndView("front-end/findwork", "jobPosts", jobPosts);
 	}
 
 }

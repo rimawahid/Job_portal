@@ -64,14 +64,12 @@ public class JobApplicationController {
 	@RequestMapping(value = "/approvedapplications", method = RequestMethod.GET)
 	public ModelAndView approvedApplications() {
 		List<ApplyJob> applyJob = applyJobService.findByApproved(null);
-		//System.out.println(applyJob);
 		return new ModelAndView("clients/applications/approvedApplications", "applyJob", applyJob);
 	}
 
 	@RequestMapping(value = "/rejectedapplications", method = RequestMethod.GET)
 	public ModelAndView rejectedApplications() {
 		List<ApplyJob> applyJob = applyJobService.findByRejected(null);
-		//System.out.println(applyJob);
 		return new ModelAndView("clients/applications/rejectedApplication", "applyJob", applyJob);
 	}
 
