@@ -12,7 +12,7 @@
 		<br /> 
 		
 				<c:forEach items="${jobpost}" var="jobPosts">
-				<a class="jobs" href="/findwork/details/${jobPosts.id}">
+				<a class="jobs" href="/freelancer/findwork/details/${jobPosts.id}">
 					<div class="job-wrap border p-3 job-post">
 						<p>${jobPosts.title}</p>
 						<div class="d-flex justify-content-start">

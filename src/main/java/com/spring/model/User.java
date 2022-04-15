@@ -23,8 +23,8 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "userId")
-	private int userId;
+	@Column(name = "id")
+	private int id;
 
 	@Column(name = "firstName")
 	private String firstName;
@@ -44,8 +44,8 @@ public class User {
 	@Column(name = "country")
 	private String country;
 
-//	@Column(name = "role")
-//	private String role;
+	@Column(name = "role")
+	private String role;
 	
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinTable(
@@ -66,24 +66,24 @@ public class User {
 	@Column(name = "enabled")
 	private Boolean enabled;
 
-//	public int getId() {
-//		return id;
-//	}
-//
-//	public void setId(int id) {
-//		this.id = id;
-//	}
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getFirstName() {
 		return firstName;
 	}
 
 	public int getUserId() {
-		return userId;
+		return id;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setUserId(int id) {
+		this.id = id;
 	}
 
 	public String getUserName() {
@@ -138,14 +138,14 @@ public class User {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-//
-//	public String getRole() {
-//		return role;
-//	}
-//
-//	public void setRole(String role) {
-//		this.role = role;
-//	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 
 }

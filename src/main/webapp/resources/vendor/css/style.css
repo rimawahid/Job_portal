@@ -337,4 +337,26 @@ footer {
 	color:#fff;
 	border-radius: 50%;
 }
+
+.google-btn {
+    background: #4285F4;
+    color: #fff;
+    width: 100%;
+    border: none;
+    height: 37px;
+}
+.google-icon {
+    background: #fff;
+    padding: 7px;
+    color: #4285F4;
+    border-radius: 50%;
+    margin-left: -65px;
+    height: 35px;
+    width: 35px;
+    margin-right: 61px;
+}
+.signup {
+    background: #F2F7F2;
+    padding: 10px 25px;
+}
 /* findwork end here */

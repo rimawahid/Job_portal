@@ -29,9 +29,7 @@ public class FindWorkController {
 
 	@RequestMapping(value = "/findwork", method = RequestMethod.GET)
 	public ModelAndView bestmatch() {
-		List<JobPost> jobpost = jobPostService.getAll();
-		// return new ModelAndView("admin/categories/showCategories", "categories",
-		// categories);
+		List<JobPost> jobpost = jobPostService.getByStatus();
 		return new ModelAndView("freelancer/findWork/findwork", "jobpost", jobpost);
 	}
 
@@ -58,6 +56,14 @@ public class FindWorkController {
 		List<ApplyJob> applyJob = applyJobService.findByApproved(null);
 		System.out.println(applyJob);
 		return new ModelAndView("freelancer/findWork/proposals", "applyJob", applyJob);
+	}
+	
+	
+	@RequestMapping(value = "findwork/details/{id}", method = RequestMethod.GET)
+	public ModelAndView edit(@PathVariable String id) {
+		int pid = Integer.valueOf(id);
+		JobPost jobPost = jobPostService.getById(pid);
+		return new ModelAndView("freelancer/findWork/jobDetails", "jobPost", jobPost);
 	}
 }
 

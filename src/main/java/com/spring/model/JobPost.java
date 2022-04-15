@@ -28,14 +28,6 @@ public class JobPost {
 	@Column(name = "code")
 	private String code;
 
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
-	}
-
 	@Column(name = "title")
 	private String title;
 
@@ -72,6 +64,14 @@ public class JobPost {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 	public String getJobLength() {

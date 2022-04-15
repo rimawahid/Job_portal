@@ -106,13 +106,13 @@ public class JobPostDAO {
 	}
 
 	public List<JobPost> getByCat(String parameter) {
-		String sql = "from jobpost where category_code = '" + parameter+ "'";
+		String sql = "from jobpost where category_code = '" + parameter+ "' and status != 'done'";
         List<JobPost> skillList = getSession().createQuery(sql).list();
         return skillList;
 	}
 	public List<JobPost> getBySkill(String parameter) {
 		System.out.println(parameter);
-		String sql = "from jobpost where skill LIKE '%"+parameter+"%' ";
+		String sql = "from jobpost where skill LIKE '%"+parameter+"%' and status != 'done'";
         List<JobPost> skillList = getSession().createQuery(sql).list();
         return skillList;
 	}

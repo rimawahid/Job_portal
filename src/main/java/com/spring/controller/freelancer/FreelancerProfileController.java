@@ -43,8 +43,8 @@ public class FreelancerProfileController {
 			InputStream input = file.getInputStream();
 			Files.copy(input, saveFile.toPath());
 			freelancerProfileService.save(freelancerProfile);
-			System.out.println(fileName);
-			System.out.println(freelancerProfile.getTitle());
+			//System.out.println(fileName);
+			//System.out.println(freelancerProfile.getTitle());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

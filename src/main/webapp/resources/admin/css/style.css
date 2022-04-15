@@ -1,34 +1,56 @@
 @charset "ISO-8859-1";
 
-.bg{
-	background-color:#484747
+.bg {
+	background-color: #484747
 }
+
 .btn-save {
-    background-color: #3C8224;
-    color: #fff;
-    width: 120px;
-    border-radius: 20px;
-    margin-top:10px
+	background-color: #3C8224;
+	color: #fff;
+	width: 120px;
+	border-radius: 20px;
+	margin-top: 10px
 }
-.mt{
-	margin-top:-10px;
+
+.mt {
+	margin-top: -10px;
 }
+
 .job-text {
-    color: #656565;
-    font-size: 13px;
-    /* line-height: 18px; */
-    margin-top: 3px;
+	color: #656565;
+	font-size: 13px;
+	/* line-height: 18px; */
+	margin-top: 3px;
 }
+
 .skill {
-    border: 1px solid gray;
-    padding: 0px 15px;
-    background: #f7f7f7;
-    margin: 0px 3px;
+	border: 1px solid gray;
+	padding: 0px 15px;
+	background: #f7f7f7;
+	margin: 0px 3px;
 }
+
 .star-color {
-    color: #14A800;
-    font-size: 13px;
+	color: #14A800;
+	font-size: 13px;
 }
-.tick-color{
-	color:#1f57c3;
+
+.tick-color {
+	color: #1f57c3;
+}
+
+.payment-btn {
+	color: #14A800;
+	background: #F8F9FC;
+	margin-top: 30px;
+	border: 2px solid #E0E0E0;
+}
+.payment-text{
+	font-size: 14px;
+}
+.payment-heading {
+    background: #F9F9F9;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-top: 5px;
 }

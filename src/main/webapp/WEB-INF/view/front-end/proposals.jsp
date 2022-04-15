@@ -15,6 +15,11 @@
 								class="form-control" id="title" name="title"
 								value="${jobPost.title}"> 
 						</div>
+						<div class="form-group">
+							<input type="hidden"
+								class="form-control" id="jobLength" name="jobLength"
+								value="${jobPost.jobLength}"> 
+						</div>
 					<div class="form-row">
 						<div class="form-group col-md-6">
 							<label for="jcode">Code</label> <input type="text"

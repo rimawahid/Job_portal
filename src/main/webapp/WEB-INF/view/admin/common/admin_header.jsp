@@ -142,8 +142,8 @@
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" href="login.html">Settings</a> <a
-							class="collapse-item" href="register.html">Approve</a> <a
+						<a class="collapse-item" href="/payment">Add Payment Methods</a> <a
+							class="collapse-item" href="/payment/allmethod">All Payment Methods</a> <a
 							class="collapse-item" href="forgot-password.html">Payments
 							Archive</a> <a class="collapse-item" href="404.html">Packages</a> <a
 							class="collapse-item" href="blank.html">Subscriptions</a> <a
@@ -155,58 +155,7 @@
 							Settings</a>
 					</div>
 				</div></li>
-			<!-- Divider -->
-			<hr class="sidebar-divider my-0">
-
-			<!-- Nav Item - Extensions -->
-			<li class="nav-item"><a class="nav-link collapsed" href="#"
-				data-toggle="collapse" data-target="#collapseTwo"
-				aria-expanded="true" aria-controls="collapseTwo"> <i
-					class="fas fa-fw fa-cog"></i> <span>Extensions</span>
-			</a>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<h6 class="collapse-header">Custom Components:</h6>
-						<a class="collapse-item" href="buttons.html">Buttons</a> <a
-							class="collapse-item" href="cards.html">Cards</a>
-					</div>
-				</div></li>
-			<!-- Divider -->
-			<hr class="sidebar-divider my-0">
-			<!-- Nav Item - Statics -->
-			<li class="nav-item"><a class="nav-link collapsed" href="#"
-				data-toggle="collapse" data-target="#statistics"
-				aria-expanded="true" aria-controls="statistics"> <i
-					class="fas fa-fw fa-cog"></i> <span>Statistics</span>
-			</a>
-				<div id="statistics" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" href="buttons.html">Reports</a> <a
-							class="collapse-item" href="buttons.html">Referrals</a> <a
-							class="collapse-item" href="cards.html">Visit Analytics</a>
-					</div>
-				</div></li>
-			<!-- Divider -->
-			<hr class="sidebar-divider my-0">
-			<!-- Nav Item - Admin Users -->
-
-			<li class="nav-item"><a class="nav-link collapsed" href="#"
-				data-toggle="collapse" data-target="#admin" aria-expanded="true"
-				aria-controls="admin"> <i class="fas fa-fw fa-cog"></i> <span>Admin
-						Users</span>
-			</a>
-				<div id="admin" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" href="buttons.html">User Groups</a> <a
-							class="collapse-item" href="buttons.html">New Administrator</a> <a
-							class="collapse-item" href="cards.html">Administrator</a> <a
-							class="collapse-item" href="cards.html">User Permissions</a>
-					</div>
-				</div></li>
-
+			
 			<!-- Divider -->
 			<hr class="sidebar-divider d-none d-md-block">
 

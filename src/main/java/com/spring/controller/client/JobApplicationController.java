@@ -20,66 +20,61 @@ import com.spring.service.RejectedStatusService;
 @RestController
 @RequestMapping(value = "client/applications")
 public class JobApplicationController {
-	
+
 	@Autowired
 	JobPostService jobPostService;
-	
+
 	@Autowired
 	ApplyJobService applyJobService;
-	
+
 	@Autowired
 	ApprovedStatusService approvedStatusService;
-	
+
 	@Autowired
 	RejectedStatusService rejectedStatusService;
-	
+
 	@RequestMapping(value = "/jobapplications", method = RequestMethod.GET)
 	public ModelAndView jobApplications() {
 		List<JobPost> jobPosts = jobPostService.getAll();
 		return new ModelAndView("clients/applications/jobApplications", "jobPosts", jobPosts);
 	}
-	
-	
-	//search subcategory through category
+
+	// search subcategory through category
 	@RequestMapping(value = "/searchTitle/{title}", method = RequestMethod.POST)
 	public List<ApplyJob> getValue(HttpServletRequest request, @PathVariable("title") String title) {
 		return applyJobService.getByTitle(title);
 	}
-	
+
 	@RequestMapping(value = "/approved/{id}", method = RequestMethod.GET)
-	//public ModelAndView update(HttpServletRequest request , @ModelAttribute ApprovedStatus approvedStatus, @PathVariable("id") int id) {
-	public ModelAndView update(HttpServletRequest request , @PathVariable("id") String id) {	
+	public ModelAndView update(HttpServletRequest request, @PathVariable("id") String id) {
 		ApplyJob applyjob = applyJobService.getById(Integer.valueOf(id));
 		ApplyJob p = applyJobService.approvedStatus(applyjob);
 		ApprovedStatus b = approvedStatusService.save(p);
 		return approvedApplications();
 	}
-	
-	
+
 	@RequestMapping(value = "/rejected/{id}", method = RequestMethod.GET)
-	//public ModelAndView update(HttpServletRequest request , @ModelAttribute ApprovedStatus approvedStatus, @PathVariable("id") int id) {
-	public ModelAndView updateRejectedStatus(HttpServletRequest request , @PathVariable("id") String id) {	
+	public ModelAndView updateRejectedStatus(HttpServletRequest request, @PathVariable("id") String id) {
 		ApplyJob applyjob = applyJobService.getById(Integer.valueOf(id));
 		ApplyJob p = applyJobService.rejectedStatus(applyjob);
 		RejectedStatus b = rejectedStatusService.save(p);
 		return rejectedApplications();
 	}
-	
-	
+
 	@RequestMapping(value = "/approvedapplications", method = RequestMethod.GET)
 	public ModelAndView approvedApplications() {
 		List<ApplyJob> applyJob = applyJobService.findByApproved(null);
-		System.out.println(applyJob);
+		//System.out.println(applyJob);
 		return new ModelAndView("clients/applications/approvedApplications", "applyJob", applyJob);
 	}
-	
+
 	@RequestMapping(value = "/rejectedapplications", method = RequestMethod.GET)
 	public ModelAndView rejectedApplications() {
 		List<ApplyJob> applyJob = applyJobService.findByRejected(null);
-		System.out.println(applyJob);
+		//System.out.println(applyJob);
 		return new ModelAndView("clients/applications/rejectedApplication", "applyJob", applyJob);
 	}
-	
+
 //	/* For All Clients */
 //	@RequestMapping(value = "/client", method = RequestMethod.GET)
 //	public ModelAndView viewClient() {
@@ -87,20 +82,12 @@ public class JobApplicationController {
 //		System.out.println(users);
 //		return new ModelAndView("admin/users/clients", "users", users);
 //	}
-	
 
-	
-
-	
-	
-	
 //	@RequestMapping(value = "/rejectedapplications", method = RequestMethod.GET)
 //	public ModelAndView rejectedApplications() {
 //		return new ModelAndView("clients/applications/rejectedApplication");
 //	}
-	
-	
-	
+
 //	/* For show */
 //	@RequestMapping(value = "/jobapplications", method = RequestMethod.GET)
 //	public ModelAndView view() {
