@@ -28,7 +28,9 @@
 					<td>${approved.jobLength}</td>
 <%-- 					<td>${approved.proposalDate}</td> --%>
 					<td>${approved.deliveryTime}</td>
-					<td>${approved.status}</td>
+					<td><input type="hidden" class="form-control"value="${approved.id}" id="id" name="id">
+				<a type="submit" href="/freelancer/submitjob/${approved.id}" class="btn btn-success">Submit</a></td>
+<%-- 					<td>${approved.status}</td> --%>
 					
 				</tr>
 			</c:forEach>
