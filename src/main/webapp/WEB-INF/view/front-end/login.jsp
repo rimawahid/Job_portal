@@ -53,4 +53,4 @@
 	</div>
 </footer>
 
-<%@include file="/WEB-INF/view/front-end/common/footer.jsp"%>
+<%-- <%@include file="/WEB-INF/view/front-end/common/footer.jsp"%> --%>

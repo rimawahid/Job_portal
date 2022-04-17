@@ -1,5 +1,12 @@
 @charset "ISO-8859-1";
 
-.btn-save{
+.bg-gradient-client{
 	
+    background: #0077B5;
+
+}
+
+.topbar-client {
+    background: #EEEEEE;
+    height: 3.5rem;
 }

@@ -139,9 +139,9 @@
 				</div></li>
 
 			<!-- Divider -->
-			<hr class="sidebar-divider my-0">
+<!-- 			<hr class="sidebar-divider my-0"> -->
 <!-- 			<!-- Divider --> 
-<!-- 			<hr class="sidebar-divider d-none d-md-block"> -->
+			<hr class="sidebar-divider d-none d-md-block">
 
 			<!-- Sidebar Toggler (Sidebar) -->
 			<div class="text-center d-none d-md-inline">

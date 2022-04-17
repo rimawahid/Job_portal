@@ -5250,9 +5250,12 @@ a.badge-warning:focus, a.badge-warning.focus {
 }
 
 .badge-danger {
-  color: #fff;
-  background-color: #dc3545;
+    color: #fff;
+    background-color: #dc3545;
+    margin-left: -12px;
+    /* margin-top: 1px; */
 }
+
 
 a.badge-danger:hover, a.badge-danger:focus {
   color: #fff;
@@ -6964,6 +6967,7 @@ button.bg-dark:focus {
 
 .rounded-circle {
   border-radius: 50% !important;
+      height: 32px;
 }
 
 .rounded-pill {
