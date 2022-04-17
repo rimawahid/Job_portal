@@ -43,6 +43,12 @@ public class ApplyJob {
 	@Column(name = "jobLength")
 	private String jobLength;
 	
+	@Column(name = "attachment")
+	private String attachment;
+
+	@Column(name = "status")
+	private String status = "pending";
+	
 	public String getJobLength() {
 		return jobLength;
 	}
@@ -51,11 +57,7 @@ public class ApplyJob {
 		this.jobLength = jobLength;
 	}
 
-	@Column(name = "attachment")
-	private String attachment;
-
-	@Column(name = "status")
-	private String status = "pending";
+	
 
 	public String getJcode() {
 		return jcode;

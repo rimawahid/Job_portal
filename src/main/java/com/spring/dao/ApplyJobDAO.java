@@ -62,7 +62,7 @@ public class ApplyJobDAO {
 		getSession().flush();
 		return (ApplyJob) applyJob;
 	}
-	
+		
 	public List<ApplyJob> findByApproved(String status) {
 		String sql = "from applyjob where status = '" + "approved" + "'";
         List<ApplyJob> approvedList = getSession().createQuery(sql).list();
@@ -75,4 +75,5 @@ public class ApplyJobDAO {
         return approvedList;
 
 	}
+
 }

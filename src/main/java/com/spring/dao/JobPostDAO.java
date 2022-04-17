@@ -72,6 +72,12 @@ public class JobPostDAO {
     }
     
     
+    public JobPost getByCode(String code) {
+        String sql = "from jobpost where code = '" + code + "'"  ;
+        List<JobPost> catList = getSession().createQuery(sql).list();  
+        return catList.get(0);
+    }
+    
     
     
     public JobPost getByTitle(String title) {
@@ -88,13 +94,13 @@ public class JobPostDAO {
 		return (JobPost) jobPost;
 	}
     
-//    public JobPost updateRejectStatus(JobPost jobPost) {
-//		String hql = "update jobpost set status ='rejected' where title = '" + jobPost.getTitle() + "'";
-//		Query q = getSession().createQuery(hql);
-//		q.executeUpdate();
-//		getSession().flush();
-//		return (JobPost) jobPost;
-//	}
+    public JobPost updatedoneStatus(JobPost jobPost) {
+		String hql = "update jobpost set status ='done' where title = '" + jobPost.getTitle() + "'";
+		Query q = getSession().createQuery(hql);
+		q.executeUpdate();
+		getSession().flush();
+		return (JobPost) jobPost;
+	}
     
     
 //    search by skills

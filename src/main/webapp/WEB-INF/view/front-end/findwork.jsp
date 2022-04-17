@@ -25,7 +25,7 @@
 <!-- 				</div> -->
 				<c:forEach items="${categories}" var="category">
 				<div class="form-check pb-3 findwork-text">
-					<input class="form-check-input" type="radio" value="${category.code}" name="findjob" id="${category.code}" class="testc">
+					<input class="form-check-input" type="radio" value="${category.code}" name="findjob" id="${category.code}" class="testc" checked>
 					<label class="form-check-label" for="${category.name}">${category.name}</label>
 				</div>
 				</c:forEach>

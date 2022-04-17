@@ -33,6 +33,8 @@ public class JobPostService {
 	public JobPost getById(int pid) {
         return jobPostDAO.getById(pid);
     }
+	
+	
 	public JobPost update (JobPost j) {
 		return jobPostDAO.update(j);
 	}
@@ -50,13 +52,17 @@ public class JobPostService {
 			return jobPostDAO.getByTitle(title);
 		}
 	 
+	 public JobPost getBYCode(String code) {
+			return jobPostDAO.getByCode(code);
+		}
+	 
 	public JobPost updateStatus(JobPost jobPost) {
 			return jobPostDAO.updateStatus(jobPost);
 		}
 	
-//	public JobPost updateRejectStatus(JobPost jobPost) {
-//		return jobPostDAO.updateRejectStatus(jobPost);
-//	}
+	public JobPost updatedoneStatus(JobPost jobPost) {
+		return jobPostDAO.updatedoneStatus(jobPost);
+	}
 		
 	public List<JobPost> searchBySkills(String skill) {
 		return  jobPostDAO.searchBySkills(skill);

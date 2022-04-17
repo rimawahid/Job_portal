@@ -70,8 +70,9 @@
 				<div id="jobs" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" href="/client/job/postjob">Post a Job</a> <a
-							class="collapse-item" href="/client/job/showJobs">All Job</a>
+						<a class="collapse-item" href="/client/job/postjob">Post a Job</a>
+						 <a	class="collapse-item" href="/client/job/showJobs">All Job</a>
+						 <a	class="collapse-item" href="/client/submittedproject">Submitted Job</a>
 
 
 					</div>
