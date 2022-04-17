@@ -123,6 +123,11 @@ public class JobPostDAO {
         return skillList;
 	}
     
+	public List<JobPost> findByDone(String status) {
+		String sql = "from jobpost where status = '" + "done" + "'";
+        List<JobPost> approvedList = getSession().createQuery(sql).list();
+        return approvedList;
 
+	}
 	
 }

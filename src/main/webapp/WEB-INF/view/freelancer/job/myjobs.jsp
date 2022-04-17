@@ -8,12 +8,14 @@
 		class="table table-striped table-hover text-center">
 		<thead>
 			<tr>
-				<th>Freelancer</th>
+<!-- 				<th>Freelancer</th> -->
+				
+				<th>Job Code</th>
 				<th>Job</th>
-				<th>Bid-Amount</th>
+<!-- 				<th>Bid-Amount</th> -->
 <!-- 				<th>budget</th> -->
 <!-- 				<th>Proposal Date</th> -->
-				<th>deliveryTime</th>
+<!-- 				<th>deliveryTime</th> -->
 <!-- 				<th>Status</th> -->
 				<th>Action</th>
 				
@@ -22,12 +24,12 @@
 		<tbody>
 			<c:forEach items="${applyJob}" var="approved">
 				<tr>
-					<td>${approved.freelancer}</td>
+				<td>${approved.code}</td>
 					<td>${approved.title}</td>
-					<td>${approved.bidAmount}</td>
+<%-- 					<td>${approved.bidAmount}</td> --%>
 <%-- 					<td>${approved.budget}</td> --%>
 <%-- 					<td>${approved.proposalDate}</td> --%>
-					<td>${approved.deliveryTime}</td>
+<%-- 					<td>${approved.deliveryTime}</td> --%>
 					<td>${approved.status}</td>
 					
 				</tr>

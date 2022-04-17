@@ -38,7 +38,7 @@ public class FreelancerJobsConrtoller {
 
 	@RequestMapping(value = "/jobs", method = RequestMethod.GET)
 	public ModelAndView jobs() {
-		List<ApplyJob> applyJob = applyJobService.findByApproved(null);
+		List<JobPost> applyJob = jobPostService.findByDone(null);
 		//System.out.println(applyJob);
 		return new ModelAndView("freelancer/job/myjobs", "applyJob", applyJob);
 	}

@@ -75,5 +75,7 @@ public class ApplyJobDAO {
         return approvedList;
 
 	}
+	
+	
 
 }

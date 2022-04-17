@@ -48,4 +48,6 @@ public class ApplyJobService {
 	public List<ApplyJob> findByRejected(String status) {
 		return applyJobDAO.findByRejected(status);
 	}
+	
+	
 }

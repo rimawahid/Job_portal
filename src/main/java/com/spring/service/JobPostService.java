@@ -78,6 +78,8 @@ public class JobPostService {
 		return jobPostDAO.getBySkill(parameter);
 	}
 	
-	
+	public List<JobPost> findByDone(String status) {
+		return jobPostDAO.findByDone(status);
+	}
 	 
 }
