@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.spring.dao.ApplyJobDAO;
 import com.spring.model.ApplyJob;
+import com.spring.model.ApplyJobFlutter;
 import com.spring.model.JobPost;
 import com.spring.model.User;
 
@@ -18,6 +19,10 @@ public class ApplyJobService {
 	JobPostService jobPostService;
 
 	public ApplyJob save(ApplyJob applyJob) {
+		return applyJobDAO.save(applyJob);
+	}
+	
+	public ApplyJobFlutter save(ApplyJobFlutter applyJob) {
 		return applyJobDAO.save(applyJob);
 	}
 

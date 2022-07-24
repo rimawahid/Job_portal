@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.gson.Gson;
 import com.spring.model.Category;
 
 import com.spring.service.CategoryService;
@@ -76,5 +77,14 @@ public class CategoriesController {
 	public ModelAndView viewCategory() {
 		List<Category> categories = categoryService.getAll();
 		return new ModelAndView("clients/job/postJob", "categories", categories);
+	}
+	
+	
+	@RequestMapping(value="/listJson", method = RequestMethod.GET)
+	public String showJson() {
+		List<Category> ct = categoryService.getAll();
+		Gson gson = new Gson();
+		String json= gson.toJson(ct);
+		return json;
 	}
 }

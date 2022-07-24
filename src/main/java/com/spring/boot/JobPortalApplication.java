@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages="com.spring")
 @EntityScan(basePackages= {"com.spring"})
-public class JobPortalApplication extends SpringBootServletInitializer{
+public class JobPortalApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(JobPortalApplication.class, args);

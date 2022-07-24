@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.model.ApplyJob;
+import com.spring.model.ApplyJobFlutter;
 
 
 @Repository(value = "applyJobDAO")
@@ -27,6 +28,13 @@ public class ApplyJobDAO {
 		getSession().save(applyJob);
 		getSession().flush();
 		return applyJob;
+	}
+	
+	//for flutter
+	public ApplyJobFlutter save(ApplyJobFlutter ApplyJobFlutter) {
+		getSession().save(ApplyJobFlutter);
+		getSession().flush();
+		return ApplyJobFlutter;
 	}
 
 	public List<ApplyJob> getByTitle(String title) {
